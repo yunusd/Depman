@@ -267,7 +267,7 @@
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.txtSearch.Location = new System.Drawing.Point(3, 230);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(154, 40);
+            this.txtSearch.Size = new System.Drawing.Size(154, 29);
             this.txtSearch.TabIndex = 8;
             this.txtSearch.Text = "Ara";
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -390,7 +390,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label1.Location = new System.Drawing.Point(37, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 39);
+            this.label1.Size = new System.Drawing.Size(91, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Depman";
             // 
@@ -422,9 +422,11 @@
             this.dgvDepartments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDepartments.Size = new System.Drawing.Size(253, 126);
             this.dgvDepartments.TabIndex = 0;
+            this.dgvDepartments.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DgvDepartments_KeyDown);
             // 
             // clmDepartmentId
             // 
+            this.clmDepartmentId.DataPropertyName = "DepartmentId";
             this.clmDepartmentId.HeaderText = "Birim No";
             this.clmDepartmentId.MinimumWidth = 10;
             this.clmDepartmentId.Name = "clmDepartmentId";
@@ -432,6 +434,7 @@
             // 
             // clmDepartmentName
             // 
+            this.clmDepartmentName.DataPropertyName = "DepartmentName";
             this.clmDepartmentName.HeaderText = "Birim Adı";
             this.clmDepartmentName.MinimumWidth = 10;
             this.clmDepartmentName.Name = "clmDepartmentName";
@@ -483,7 +486,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label8.Location = new System.Drawing.Point(3, 115);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 33);
+            this.label8.Size = new System.Drawing.Size(64, 22);
             this.label8.TabIndex = 7;
             this.label8.Text = "Durum";
             // 
@@ -494,7 +497,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label9.Location = new System.Drawing.Point(3, 44);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 33);
+            this.label9.Size = new System.Drawing.Size(87, 22);
             this.label9.TabIndex = 6;
             this.label9.Text = "Ekip Lideri";
             // 
@@ -535,7 +538,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label11.Location = new System.Drawing.Point(3, 176);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 33);
+            this.label11.Size = new System.Drawing.Size(77, 22);
             this.label11.TabIndex = 3;
             this.label11.Text = "Açıklama";
             // 
@@ -648,7 +651,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label5.Location = new System.Drawing.Point(3, 115);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 33);
+            this.label5.Size = new System.Drawing.Size(64, 22);
             this.label5.TabIndex = 7;
             this.label5.Text = "Durum";
             // 
@@ -659,7 +662,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label4.Location = new System.Drawing.Point(3, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 33);
+            this.label4.Size = new System.Drawing.Size(87, 22);
             this.label4.TabIndex = 6;
             this.label4.Text = "Ekip Lideri";
             // 
@@ -700,7 +703,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label2.Location = new System.Drawing.Point(3, 176);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 33);
+            this.label2.Size = new System.Drawing.Size(77, 22);
             this.label2.TabIndex = 3;
             this.label2.Text = "Açıklama";
             // 
@@ -776,7 +779,7 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label15.Location = new System.Drawing.Point(3, 115);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(94, 33);
+            this.label15.Size = new System.Drawing.Size(64, 22);
             this.label15.TabIndex = 7;
             this.label15.Text = "Durum";
             // 
@@ -787,7 +790,7 @@
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label16.Location = new System.Drawing.Point(3, 44);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(130, 33);
+            this.label16.Size = new System.Drawing.Size(87, 22);
             this.label16.TabIndex = 6;
             this.label16.Text = "Ekip Lideri";
             // 
@@ -828,7 +831,7 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label18.Location = new System.Drawing.Point(3, 176);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(114, 33);
+            this.label18.Size = new System.Drawing.Size(77, 22);
             this.label18.TabIndex = 3;
             this.label18.Text = "Açıklama";
             // 
@@ -904,7 +907,7 @@
             this.label85.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label85.Location = new System.Drawing.Point(3, 115);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(94, 33);
+            this.label85.Size = new System.Drawing.Size(64, 22);
             this.label85.TabIndex = 7;
             this.label85.Text = "Durum";
             // 
@@ -915,7 +918,7 @@
             this.label86.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label86.Location = new System.Drawing.Point(3, 44);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(130, 33);
+            this.label86.Size = new System.Drawing.Size(87, 22);
             this.label86.TabIndex = 6;
             this.label86.Text = "Ekip Lideri";
             // 
@@ -956,7 +959,7 @@
             this.label88.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label88.Location = new System.Drawing.Point(3, 176);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(114, 33);
+            this.label88.Size = new System.Drawing.Size(77, 22);
             this.label88.TabIndex = 3;
             this.label88.Text = "Açıklama";
             // 
@@ -1017,10 +1020,11 @@
             this.txtAddDeparment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.txtAddDeparment.Location = new System.Drawing.Point(3, 3);
             this.txtAddDeparment.Name = "txtAddDeparment";
-            this.txtAddDeparment.Size = new System.Drawing.Size(253, 40);
+            this.txtAddDeparment.Size = new System.Drawing.Size(253, 29);
             this.txtAddDeparment.TabIndex = 1;
             this.txtAddDeparment.Text = "Yeni Birim Ekle (Eklemek için Enter\'a basınız)";
             this.txtAddDeparment.Enter += new System.EventHandler(this.TxtAddDeparment_Enter);
+            this.txtAddDeparment.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAddDeparment_KeyDown);
             this.txtAddDeparment.Leave += new System.EventHandler(this.TxtAddDeparment_Leave);
             // 
             // tlpQuestions
@@ -1079,7 +1083,7 @@
             this.txtAddQuestion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.txtAddQuestion.Location = new System.Drawing.Point(3, 3);
             this.txtAddQuestion.Name = "txtAddQuestion";
-            this.txtAddQuestion.Size = new System.Drawing.Size(253, 40);
+            this.txtAddQuestion.Size = new System.Drawing.Size(253, 29);
             this.txtAddQuestion.TabIndex = 1;
             this.txtAddQuestion.Text = "Yeni Soru Ekle (Eklemek için Enter\'a basınız)";
             this.txtAddQuestion.Enter += new System.EventHandler(this.TxtAddQuestion_Enter);
@@ -1287,7 +1291,7 @@
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label32.Location = new System.Drawing.Point(3, 60);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(94, 33);
+            this.label32.Size = new System.Drawing.Size(64, 22);
             this.label32.TabIndex = 7;
             this.label32.Text = "Durum";
             // 
@@ -1463,7 +1467,7 @@
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label33.Location = new System.Drawing.Point(3, 60);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(94, 33);
+            this.label33.Size = new System.Drawing.Size(64, 22);
             this.label33.TabIndex = 7;
             this.label33.Text = "Durum";
             // 
@@ -1639,7 +1643,7 @@
             this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label40.Location = new System.Drawing.Point(3, 60);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(94, 33);
+            this.label40.Size = new System.Drawing.Size(64, 22);
             this.label40.TabIndex = 7;
             this.label40.Text = "Durum";
             // 
@@ -1815,7 +1819,7 @@
             this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label47.Location = new System.Drawing.Point(3, 60);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(94, 33);
+            this.label47.Size = new System.Drawing.Size(64, 22);
             this.label47.TabIndex = 7;
             this.label47.Text = "Durum";
             // 
@@ -2050,7 +2054,7 @@
             this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label54.Location = new System.Drawing.Point(3, 60);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(94, 33);
+            this.label54.Size = new System.Drawing.Size(64, 22);
             this.label54.TabIndex = 7;
             this.label54.Text = "Durum";
             // 
@@ -2256,7 +2260,7 @@
             this.label63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label63.Location = new System.Drawing.Point(3, 60);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(94, 33);
+            this.label63.Size = new System.Drawing.Size(64, 22);
             this.label63.TabIndex = 7;
             this.label63.Text = "Durum";
             // 
@@ -2462,7 +2466,7 @@
             this.label72.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label72.Location = new System.Drawing.Point(3, 60);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(94, 33);
+            this.label72.Size = new System.Drawing.Size(64, 22);
             this.label72.TabIndex = 7;
             this.label72.Text = "Durum";
             // 
@@ -2668,7 +2672,7 @@
             this.label83.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.label83.Location = new System.Drawing.Point(3, 60);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(94, 33);
+            this.label83.Size = new System.Drawing.Size(64, 22);
             this.label83.TabIndex = 7;
             this.label83.Text = "Durum";
             // 
@@ -2691,7 +2695,7 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1146, 830);
             this.Controls.Add(this.tlpProjects);
@@ -2782,9 +2786,6 @@
         private System.Windows.Forms.DataGridView dgvDepartments;
         private System.Windows.Forms.TableLayoutPanel tlpProjects;
         private System.Windows.Forms.TableLayoutPanel tlpDepartments;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDepartmentId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDepartmentName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmEmployeesOfDepartment;
         private System.Windows.Forms.TextBox txtAddDeparment;
         private System.Windows.Forms.TableLayoutPanel tlpQuestions;
         private System.Windows.Forms.DataGridView dgvQuestions;
@@ -2928,6 +2929,9 @@
         private System.Windows.Forms.Label label88;
         private System.Windows.Forms.Button button34;
         private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDepartmentId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDepartmentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmEmployeesOfDepartment;
     }
 }
 
