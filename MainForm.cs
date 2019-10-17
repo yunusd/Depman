@@ -27,6 +27,7 @@ namespace Depman
             ActivePanel(tlpProjects, btnProjects, "icons8_group_of_projects_25");
             ctx = new DepmanContext();
             dgvQuestions.DataSource = ctx.Question.ToList();
+            dgvDepartments.AutoGenerateColumns = false;
         }
 
         private void ActivePanel(TableLayoutPanel panel, Button button, string icon)
@@ -81,6 +82,7 @@ namespace Depman
         private void BtnDepartments_Click(object sender, EventArgs e)
         {
             ActivePanel(tlpDepartments, btnDepartments, "icons8_organization_chart_people_25");
+            ListDepartments();
         }
 
 
@@ -150,6 +152,53 @@ namespace Depman
                 ctx.SaveChanges();
                 dgvQuestions.DataSource = ctx.Question.ToList();
             }
+        }
+
+        private void TxtAddDeparment_KeyDown(object sender, KeyEventArgs e)
+        {
+            string department = txtAddDeparment.Text.Trim();
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (string.IsNullOrWhiteSpace(department))
+                {
+                    MessageBox.Show("Birim adı girmediniz!");
+                    return;
+                }
+
+                ctx.Department.Add(new Department { DepartmentName = department });
+                ctx.SaveChanges();
+                dgvDepartments.DataSource = ctx.Department.ToList();
+
+                txtAddDeparment.Clear();
+
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void DgvDepartments_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete && dgvDepartments.SelectedRows.Count > 0)
+            {
+                Department department = (Department)dgvDepartments.SelectedRows[0].DataBoundItem;
+                ctx.Department.Remove(department);
+                ctx.SaveChanges();
+                ListDepartments();
+                // int selectedDepID = dgvDepartments.CurrentRow.Index;
+
+                //if (selectedDepID != 0)
+                //{
+                //    dgvDepartments.Rows[selectedDepID - 1].Selected = true;
+
+                //}
+                //else
+                //    dgvDepartments.ClearSelection();
+            }
+        }
+
+        private void ListDepartments()
+        {
+            dgvDepartments.DataSource = ctx.Department.ToList();
         }
     }
 }
