@@ -15,7 +15,7 @@ namespace Depman.Models
 
         public DateTime StartDate { get; set; }
 
-        public DateTime FinishDate { get; set; }
+        public DateTime? FinishDate { get; set; }
 
         public long? DepartmentFK { get; set; }
 

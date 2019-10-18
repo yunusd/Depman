@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -15,15 +16,19 @@ namespace Depman.Models
 
         public string EmployeeLastName { get; set; }
 
+        public string Sex { get; set; }
+
         public string Degree { get; set; }
 
         public string Address { get; set; }
 
+
+        [StringLength(11)]
         public string Phone { get; set; }
 
         public string Email { get; set; }
 
-        public byte? EmployeeImg { get; set; }
+        public string EmployeeImgPath { get; set; }
 
         public float? Rating { get; set; }
 

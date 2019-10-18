@@ -30,6 +30,10 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cboManager = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtDegree = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -64,10 +68,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.ofdUploadEmployeePic = new System.Windows.Forms.OpenFileDialog();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtDegree = new System.Windows.Forms.TextBox();
-            this.cboManager = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -133,6 +133,43 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(687, 408);
             this.panel2.TabIndex = 20;
+            // 
+            // cboManager
+            // 
+            this.cboManager.FormattingEnabled = true;
+            this.cboManager.Location = new System.Drawing.Point(359, 182);
+            this.cboManager.Name = "cboManager";
+            this.cboManager.Size = new System.Drawing.Size(124, 23);
+            this.cboManager.TabIndex = 40;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
+            this.label11.Location = new System.Drawing.Point(292, 181);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 22);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Müdür:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
+            this.label12.Location = new System.Drawing.Point(21, 183);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(64, 22);
+            this.label12.TabIndex = 38;
+            this.label12.Text = "Ünvan:";
+            // 
+            // txtDegree
+            // 
+            this.txtDegree.Location = new System.Drawing.Point(91, 181);
+            this.txtDegree.Name = "txtDegree";
+            this.txtDegree.Size = new System.Drawing.Size(128, 22);
+            this.txtDegree.TabIndex = 36;
             // 
             // pictureBox2
             // 
@@ -287,7 +324,6 @@
             // 
             // cboSex
             // 
-            this.cboSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSex.FormattingEnabled = true;
             this.cboSex.Location = new System.Drawing.Point(91, 139);
             this.cboSex.Name = "cboSex";
@@ -449,43 +485,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(170, 22);
             this.textBox1.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label11.Location = new System.Drawing.Point(292, 181);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 22);
-            this.label11.TabIndex = 39;
-            this.label11.Text = "Müdür:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label12.Location = new System.Drawing.Point(21, 183);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 22);
-            this.label12.TabIndex = 38;
-            this.label12.Text = "Ünvan:";
-            // 
-            // txtDegree
-            // 
-            this.txtDegree.Location = new System.Drawing.Point(91, 181);
-            this.txtDegree.Name = "txtDegree";
-            this.txtDegree.Size = new System.Drawing.Size(128, 22);
-            this.txtDegree.TabIndex = 36;
-            // 
-            // cboManager
-            // 
-            this.cboManager.FormattingEnabled = true;
-            this.cboManager.Location = new System.Drawing.Point(359, 182);
-            this.cboManager.Name = "cboManager";
-            this.cboManager.Size = new System.Drawing.Size(124, 23);
-            this.cboManager.TabIndex = 40;
             // 
             // AddEmployeeForm
             // 

@@ -91,6 +91,10 @@
     <Compile Include="Migrations\201910141304507_Init.designer.cs">
       <DependentUpon>201910141304507_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910180913052_ChangeEmployeeModel.cs" />
+    <Compile Include="Migrations\201910180913052_ChangeEmployeeModel.designer.cs">
+      <DependentUpon>201910180913052_ChangeEmployeeModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Authorization.cs" />
     <Compile Include="Models\Department.cs" />
@@ -128,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910141304507_Init.resx">
       <DependentUpon>201910141304507_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910180913052_ChangeEmployeeModel.resx">
+      <DependentUpon>201910180913052_ChangeEmployeeModel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
