@@ -16,6 +16,8 @@ namespace Depman
     {
         DepmanContext ctx = new DepmanContext();
         bool isOpened = false;
+        string picPath;
+        string picPathName;
         public AddEmployeeForm()
         {
             InitializeComponent();
@@ -41,7 +43,7 @@ namespace Depman
             cboManager.DisplayMember = "EmployeeFirstName";
             cboManager.ValueMember = "EmployeeID";
             cboManager.SelectedIndex = -1;
-            cboManager.Text = "-";
+            cboManager.Text = "  ";
         }
 
         private void BtnUploadEmployeePic_Click(object sender, EventArgs e)
@@ -50,7 +52,7 @@ namespace Depman
             employeePic.Filter = "Resim Dosyası |*.jpg; *.png";
             employeePic.Title = "Çalışan Fotoğrafı";
             employeePic.ShowDialog();
-            string picPath = employeePic.FileName;
+            picPath = employeePic.FileName;
             pictureBox2.ImageLocation = picPath;
         }
 
@@ -65,17 +67,14 @@ namespace Depman
             long employeeDepartmentID = (long)cboDepartment.SelectedValue;
             var employeeHireDate = dtpHireDate.Value;
             string employeeAdress = txtAddress.Text.Trim();
-            
 
+            //Resmi klasöre kaydetme
 
-
-
-
-            //PictureBoxtaki resmi byte cevirme
-            Byte[] employeePicData = null;
-            ImageConverter imgConverter = new ImageConverter();
-            employeePicData = (System.Byte[])imgConverter.ConvertTo(pictureBox2.Image, Type.GetType("System.Byte[]"));
-
+            picPathName = Path.GetFileName(picPath);
+            string source = picPath;
+            string target = Application.StartupPath + @"\img";
+            string newPicName = Guid.NewGuid() + ".jpg"; //benzersiz isim
+            File.Copy(source, target + newPicName);
 
 
 
@@ -105,7 +104,7 @@ namespace Depman
                 }
                 else
                 {
-                    long employeeManager = (long)cboManager.SelectedValue;5
+                    long employeeManager = (long)cboManager.SelectedValue;
                     ctx.Employee.Add(new Employee
                     {
                         EmployeeFirstName = employeeFirstName,
