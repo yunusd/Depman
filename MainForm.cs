@@ -270,6 +270,7 @@ namespace Depman
                 }
             }
 
+
             btnProjects.ForeColor = Color.FromArgb(217, 217, 217);
 
             btnEmployees.ForeColor = Color.FromArgb(217, 217, 217);
