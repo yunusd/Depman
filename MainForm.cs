@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -26,7 +27,6 @@ namespace Depman
             InitializeComponent();
             ActivePanel(tlpProjects, btnProjects, "icons8_group_of_projects_25");
             ctx = new DepmanContext();
-            dgvQuestions.DataSource = ctx.Question.ToList();
         }
 
         private void ActivePanel(TableLayoutPanel panel, Button button, string icon)
@@ -80,6 +80,8 @@ namespace Depman
 
         private void BtnDepartments_Click(object sender, EventArgs e)
         {
+            dgvDepartments.AutoGenerateColumns = false;
+            SaveAndGetDepartments();
             ActivePanel(tlpDepartments, btnDepartments, "icons8_organization_chart_people_25");
         }
 
@@ -116,7 +118,15 @@ namespace Depman
 
         private void BtnQuestions_Click(object sender, EventArgs e)
         {
+            dgvQuestions.AutoGenerateColumns = false;
+            SaveAndGetQuestions();
             ActivePanel(tlpQuestions, btnQuestions, "icons8_questions_25");
+        }
+
+        private void SaveAndGetQuestions(bool save = false)
+        {
+            if (save) ctx.SaveChanges();
+            dgvQuestions.DataSource = ctx.Question.ToList();
         }
 
         private void BtnReports_Click(object sender, EventArgs e)
@@ -138,24 +148,96 @@ namespace Depman
 
         private void TxtAddQuestion_KeyDown(object sender, KeyEventArgs e)
         {
+            string questionTitle = txtAddQuestion.Text;
             if (e.KeyCode == Keys.Enter)
             {
-                ctx.Question.Add(new Question { QuestionTitle = txtAddQuestion.Text });
-                ctx.SaveChanges();
-                dgvQuestions.DataSource = ctx.Question.ToList();
+                if (string.IsNullOrWhiteSpace(questionTitle))
+                {
+                    MessageBox.Show("Birim adı girmediniz!");
+                    return;
+                }
+                ctx.Question.Add(new Question { QuestionTitle =  questionTitle });
+                SaveAndGetQuestions(true);
+                txtAddQuestion.Clear();
             }
         }
 
-        private void btnAddProjectForm_Click(object sender, EventArgs e)
+        private void BtnAddProjectForm_Click(object sender, EventArgs e)
         {
             var f = new AddProjectForm();
             f.Show();
         }
 
-        private void btnProjectDetailForm_Click(object sender, EventArgs e)
+        private void BtnProjectDetailForm_Click(object sender, EventArgs e)
         {
             var f = new DetailProjectForm();
             f.Show();
+        }
+
+        private void TxtAddDeparment_KeyDown(object sender, KeyEventArgs e)
+        {
+            string department = txtAddDeparment.Text.Trim();
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (string.IsNullOrWhiteSpace(department))
+                {
+                    MessageBox.Show("Birim adı girmediniz!");
+                    return;
+                }
+                e.SuppressKeyPress = true;
+
+                ctx.Department.Add(new Department { DepartmentName = department });
+                SaveAndGetDepartments(true);
+
+                txtAddDeparment.Clear();
+
+            }
+        }
+
+        private void SaveAndGetDepartments(bool save = false)
+        {
+            if (save) ctx.SaveChanges();
+            dgvDepartments.DataSource = ctx.Department.Select(x => new
+            {
+                x.DepartmentID,
+                x.DepartmentName,
+                EmployeesOfDepartment = x.Employees.Count
+            }).ToList();
+        }
+
+        private void DgvDepartments_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete && dgvDepartments.SelectedRows.Count > 0)
+            {
+                long id = (long)dgvDepartments.SelectedRows[0].Cells[0].Value;
+                Department department = ctx.Department.Find(id);
+                ctx.Department.Remove(department);
+                SaveAndGetDepartments(true);
+            }
+        }
+
+        private void DgvDepartments_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            long id = (long)dgvDepartments.SelectedRows[0].Cells[0].Value;
+            Department department = ctx.Department.Find(id);
+            DialogResult resultEditDepartmentForm = new EditDepartmentForm(department).ShowDialog();
+            if (resultEditDepartmentForm == DialogResult.OK)
+            {
+                ctx.Entry(department).State = EntityState.Modified;
+                SaveAndGetDepartments(true);
+            }
+        }
+
+        private void DgvQuestions_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete && dgvQuestions.SelectedRows.Count > 0)
+            {
+                long id = (long)dgvQuestions.SelectedRows[0].Cells[0].Value;
+                Question question = ctx.Question.Find(id);
+                ctx.Question.Remove(question);
+                SaveAndGetQuestions(true);
+            }
         }
     }
 }

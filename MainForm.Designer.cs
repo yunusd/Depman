@@ -216,7 +216,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(160, 975);
+            this.panel1.Size = new System.Drawing.Size(160, 994);
             this.panel1.TabIndex = 0;
             // 
             // label13
@@ -271,7 +271,7 @@
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.button5.Image = global::Depman.Properties.Resources.icons8_settings_25;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 946);
+            this.button5.Location = new System.Drawing.Point(0, 965);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(160, 29);
             this.button5.TabIndex = 6;
@@ -391,9 +391,12 @@
             this.dgvDepartments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDepartments.Size = new System.Drawing.Size(253, 126);
             this.dgvDepartments.TabIndex = 0;
+            this.dgvDepartments.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDepartments_CellDoubleClick);
+            this.dgvDepartments.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DgvDepartments_KeyDown);
             // 
             // clmDepartmentId
             // 
+            this.clmDepartmentId.DataPropertyName = "DepartmentID";
             this.clmDepartmentId.HeaderText = "Birim No";
             this.clmDepartmentId.MinimumWidth = 10;
             this.clmDepartmentId.Name = "clmDepartmentId";
@@ -401,12 +404,14 @@
             // 
             // clmDepartmentName
             // 
+            this.clmDepartmentName.DataPropertyName = "DepartmentName";
             this.clmDepartmentName.HeaderText = "Birim Adı";
             this.clmDepartmentName.MinimumWidth = 10;
             this.clmDepartmentName.Name = "clmDepartmentName";
             // 
             // clmEmployeesOfDepartment
             // 
+            this.clmEmployeesOfDepartment.DataPropertyName = "EmployeesOfDepartment";
             this.clmEmployeesOfDepartment.HeaderText = "Çalışan Sayısı";
             this.clmEmployeesOfDepartment.MinimumWidth = 10;
             this.clmEmployeesOfDepartment.Name = "clmEmployeesOfDepartment";
@@ -482,7 +487,7 @@
             this.btnProjectDetailForm.TabIndex = 5;
             this.btnProjectDetailForm.Text = "Detaylar";
             this.btnProjectDetailForm.UseVisualStyleBackColor = false;
-            this.btnProjectDetailForm.Click += new System.EventHandler(this.btnProjectDetailForm_Click);
+            this.btnProjectDetailForm.Click += new System.EventHandler(this.BtnProjectDetailForm_Click);
             // 
             // label10
             // 
@@ -572,7 +577,7 @@
             this.btnAddProjectForm.TabIndex = 10;
             this.btnAddProjectForm.Text = "Yeni Proje Ekle";
             this.btnAddProjectForm.UseVisualStyleBackColor = false;
-            this.btnAddProjectForm.Click += new System.EventHandler(this.btnAddProjectForm_Click);
+            this.btnAddProjectForm.Click += new System.EventHandler(this.BtnAddProjectForm_Click);
             // 
             // tlpDepartments
             // 
@@ -603,6 +608,7 @@
             this.txtAddDeparment.TabIndex = 1;
             this.txtAddDeparment.Text = "Yeni Birim Ekle (Eklemek için Enter\'a basınız)";
             this.txtAddDeparment.Enter += new System.EventHandler(this.TxtAddDeparment_Enter);
+            this.txtAddDeparment.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAddDeparment_KeyDown);
             this.txtAddDeparment.Leave += new System.EventHandler(this.TxtAddDeparment_Leave);
             // 
             // tlpQuestions
@@ -639,9 +645,11 @@
             this.dgvQuestions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQuestions.Size = new System.Drawing.Size(253, 100);
             this.dgvQuestions.TabIndex = 0;
+            this.dgvQuestions.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DgvQuestions_KeyDown);
             // 
             // clmQuestionID
             // 
+            this.clmQuestionID.DataPropertyName = "QuestionID";
             this.clmQuestionID.HeaderText = "Soru Id";
             this.clmQuestionID.MinimumWidth = 10;
             this.clmQuestionID.Name = "clmQuestionID";
@@ -649,6 +657,7 @@
             // 
             // clmQuestionTitle
             // 
+            this.clmQuestionTitle.DataPropertyName = "QuestionTitle";
             this.clmQuestionTitle.HeaderText = "Soru Başlığı";
             this.clmQuestionTitle.MinimumWidth = 10;
             this.clmQuestionTitle.Name = "clmQuestionTitle";
@@ -2274,7 +2283,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1309, 975);
+            this.ClientSize = new System.Drawing.Size(1410, 994);
             this.Controls.Add(this.tlpProjects);
             this.Controls.Add(this.tlpEmployees);
             this.Controls.Add(this.tlpReports);
@@ -2356,14 +2365,9 @@
         private System.Windows.Forms.DataGridView dgvDepartments;
         private System.Windows.Forms.TableLayoutPanel tlpProjects;
         private System.Windows.Forms.TableLayoutPanel tlpDepartments;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDepartmentId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDepartmentName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmEmployeesOfDepartment;
         private System.Windows.Forms.TextBox txtAddDeparment;
         private System.Windows.Forms.TableLayoutPanel tlpQuestions;
         private System.Windows.Forms.DataGridView dgvQuestions;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmQuestionID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmQuestionTitle;
         private System.Windows.Forms.TextBox txtAddQuestion;
         private System.Windows.Forms.TableLayoutPanel tlpReports;
         private System.Windows.Forms.FlowLayoutPanel flpReports;
@@ -2475,6 +2479,11 @@
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.Button btnAddEmployeeForm;
         private System.Windows.Forms.Button btnAddProjectForm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDepartmentId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDepartmentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmEmployeesOfDepartment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmQuestionID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmQuestionTitle;
     }
 }
 
