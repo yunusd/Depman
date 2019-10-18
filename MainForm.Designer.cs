@@ -47,40 +47,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnProjectDetailForm = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.tlpProjects = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblProjectName = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label85 = new System.Windows.Forms.Label();
-            this.label86 = new System.Windows.Forms.Label();
-            this.button33 = new System.Windows.Forms.Button();
-            this.label87 = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.button34 = new System.Windows.Forms.Button();
-            this.label89 = new System.Windows.Forms.Label();
+            this.btnAddProjectForm = new System.Windows.Forms.Button();
             this.tlpDepartments = new System.Windows.Forms.TableLayoutPanel();
             this.txtAddDeparment = new System.Windows.Forms.TextBox();
             this.tlpQuestions = new System.Windows.Forms.TableLayoutPanel();
@@ -202,10 +175,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartments)).BeginInit();
             this.panel2.SuspendLayout();
             this.tlpProjects.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.tlpDepartments.SuspendLayout();
             this.tlpQuestions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestions)).BeginInit();
@@ -247,7 +216,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(160, 830);
+            this.panel1.Size = new System.Drawing.Size(160, 975);
             this.panel1.TabIndex = 0;
             // 
             // label13
@@ -302,7 +271,7 @@
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.button5.Image = global::Depman.Properties.Resources.icons8_settings_25;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 801);
+            this.button5.Location = new System.Drawing.Point(0, 946);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(160, 29);
             this.button5.TabIndex = 6;
@@ -449,13 +418,13 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btnProjectDetailForm);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel2.Location = new System.Drawing.Point(20, 20);
+            this.panel2.Location = new System.Drawing.Point(20, 60);
             this.panel2.Margin = new System.Windows.Forms.Padding(20);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(222, 322);
@@ -498,21 +467,22 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "Ekip Lideri";
             // 
-            // button3
+            // btnProjectDetailForm
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(107)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button3.Location = new System.Drawing.Point(0, 292);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(222, 30);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Detaylar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnProjectDetailForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(107)))));
+            this.btnProjectDetailForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProjectDetailForm.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnProjectDetailForm.FlatAppearance.BorderSize = 0;
+            this.btnProjectDetailForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProjectDetailForm.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProjectDetailForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
+            this.btnProjectDetailForm.Location = new System.Drawing.Point(0, 292);
+            this.btnProjectDetailForm.Name = "btnProjectDetailForm";
+            this.btnProjectDetailForm.Size = new System.Drawing.Size(222, 30);
+            this.btnProjectDetailForm.TabIndex = 5;
+            this.btnProjectDetailForm.Text = "Detaylar";
+            this.btnProjectDetailForm.UseVisualStyleBackColor = false;
+            this.btnProjectDetailForm.Click += new System.EventHandler(this.btnProjectDetailForm_Click);
             // 
             // label10
             // 
@@ -576,421 +546,33 @@
             this.tlpProjects.AutoScroll = true;
             this.tlpProjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(48)))));
             this.tlpProjects.ColumnCount = 1;
-            this.tlpProjects.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpProjects.Controls.Add(this.flowLayoutPanel1, 0, 0);
-            this.tlpProjects.Location = new System.Drawing.Point(171, 10);
+            this.tlpProjects.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpProjects.Controls.Add(this.btnAddProjectForm, 0, 0);
+            this.tlpProjects.Controls.Add(this.panel2, 0, 1);
+            this.tlpProjects.Location = new System.Drawing.Point(195, 159);
             this.tlpProjects.Name = "tlpProjects";
-            this.tlpProjects.RowCount = 1;
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.11111F));
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 362F));
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 362F));
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 362F));
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 362F));
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 362F));
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 362F));
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 362F));
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 362F));
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 362F));
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 362F));
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 362F));
-            this.tlpProjects.Size = new System.Drawing.Size(259, 362);
+            this.tlpProjects.RowCount = 2;
+            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpProjects.Size = new System.Drawing.Size(417, 481);
             this.tlpProjects.TabIndex = 4;
             // 
-            // flowLayoutPanel1
+            // btnAddProjectForm
             // 
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Controls.Add(this.panel3);
-            this.flowLayoutPanel1.Controls.Add(this.panel4);
-            this.flowLayoutPanel1.Controls.Add(this.panel13);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(253, 356);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(71)))));
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.lblProjectName);
-            this.panel3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel3.Location = new System.Drawing.Point(20, 382);
-            this.panel3.Margin = new System.Windows.Forms.Padding(20);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(222, 322);
-            this.panel3.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label6.Image = global::Depman.Properties.Resources.icons8_checked_checkbox_25;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(0, 141);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(204, 24);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "          10-13-2019 - 10-14-2019";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label5.Location = new System.Drawing.Point(3, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 33);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Durum";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label4.Location = new System.Drawing.Point(3, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 33);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Ekip Lideri";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(107)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button2.Location = new System.Drawing.Point(0, 292);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(222, 30);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Detaylar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.label3.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label3.Location = new System.Drawing.Point(3, 198);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(198, 70);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at libero ul" +
-    "tricies.\r\n";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label2.Location = new System.Drawing.Point(3, 176);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 33);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Açıklama";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button1.Image = global::Depman.Properties.Resources.placeholder_profile_img_30;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 41);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Ad Soyad";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // lblProjectName
-            // 
-            this.lblProjectName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblProjectName.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProjectName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.lblProjectName.Location = new System.Drawing.Point(2, 9);
-            this.lblProjectName.Name = "lblProjectName";
-            this.lblProjectName.Size = new System.Drawing.Size(220, 26);
-            this.lblProjectName.TabIndex = 0;
-            this.lblProjectName.Text = "Proje Adı";
-            this.lblProjectName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(71)))));
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Controls.Add(this.label16);
-            this.panel4.Controls.Add(this.button6);
-            this.panel4.Controls.Add(this.label17);
-            this.panel4.Controls.Add(this.label18);
-            this.panel4.Controls.Add(this.button7);
-            this.panel4.Controls.Add(this.label19);
-            this.panel4.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel4.Location = new System.Drawing.Point(20, 744);
-            this.panel4.Margin = new System.Windows.Forms.Padding(20);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(222, 322);
-            this.panel4.TabIndex = 11;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label14.Image = global::Depman.Properties.Resources.icons8_checked_checkbox_25;
-            this.label14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label14.Location = new System.Drawing.Point(0, 141);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(204, 24);
-            this.label14.TabIndex = 8;
-            this.label14.Text = "          10-13-2019 - 10-14-2019";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label15.Location = new System.Drawing.Point(3, 115);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(94, 33);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "Durum";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label16.Location = new System.Drawing.Point(3, 44);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(130, 33);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Ekip Lideri";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(107)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button6.Location = new System.Drawing.Point(0, 292);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(222, 30);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Detaylar";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.label17.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label17.Location = new System.Drawing.Point(3, 198);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(198, 70);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at libero ul" +
-    "tricies.\r\n";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label18.Location = new System.Drawing.Point(3, 176);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(114, 33);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Açıklama";
-            // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button7.Image = global::Depman.Properties.Resources.placeholder_profile_img_30;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 71);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(222, 41);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "Ad Soyad";
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label19.Location = new System.Drawing.Point(2, 9);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(220, 26);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Proje Adı";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(71)))));
-            this.panel13.Controls.Add(this.label84);
-            this.panel13.Controls.Add(this.label85);
-            this.panel13.Controls.Add(this.label86);
-            this.panel13.Controls.Add(this.button33);
-            this.panel13.Controls.Add(this.label87);
-            this.panel13.Controls.Add(this.label88);
-            this.panel13.Controls.Add(this.button34);
-            this.panel13.Controls.Add(this.label89);
-            this.panel13.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel13.Location = new System.Drawing.Point(20, 1106);
-            this.panel13.Margin = new System.Windows.Forms.Padding(20);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(222, 322);
-            this.panel13.TabIndex = 12;
-            // 
-            // label84
-            // 
-            this.label84.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label84.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label84.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label84.Image = global::Depman.Properties.Resources.icons8_checked_checkbox_25;
-            this.label84.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label84.Location = new System.Drawing.Point(0, 141);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(204, 24);
-            this.label84.TabIndex = 8;
-            this.label84.Text = "          10-13-2019 - 10-14-2019";
-            this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label85.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label85.Location = new System.Drawing.Point(3, 115);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(94, 33);
-            this.label85.TabIndex = 7;
-            this.label85.Text = "Durum";
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label86.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label86.Location = new System.Drawing.Point(3, 44);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(130, 33);
-            this.label86.TabIndex = 6;
-            this.label86.Text = "Ekip Lideri";
-            // 
-            // button33
-            // 
-            this.button33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(107)))));
-            this.button33.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button33.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button33.FlatAppearance.BorderSize = 0;
-            this.button33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button33.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button33.Location = new System.Drawing.Point(0, 292);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(222, 30);
-            this.button33.TabIndex = 5;
-            this.button33.Text = "Detaylar";
-            this.button33.UseVisualStyleBackColor = false;
-            // 
-            // label87
-            // 
-            this.label87.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label87.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.label87.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label87.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label87.Location = new System.Drawing.Point(3, 198);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(198, 70);
-            this.label87.TabIndex = 4;
-            this.label87.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at libero ul" +
-    "tricies.\r\n";
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label88.Location = new System.Drawing.Point(3, 176);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(114, 33);
-            this.label88.TabIndex = 3;
-            this.label88.Text = "Açıklama";
-            // 
-            // button34
-            // 
-            this.button34.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button34.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button34.FlatAppearance.BorderSize = 0;
-            this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button34.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button34.Image = global::Depman.Properties.Resources.placeholder_profile_img_30;
-            this.button34.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button34.Location = new System.Drawing.Point(0, 71);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(222, 41);
-            this.button34.TabIndex = 2;
-            this.button34.Text = "Ad Soyad";
-            this.button34.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button34.UseVisualStyleBackColor = true;
-            // 
-            // label89
-            // 
-            this.label89.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label89.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label89.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label89.Location = new System.Drawing.Point(2, 9);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(220, 26);
-            this.label89.TabIndex = 0;
-            this.label89.Text = "Proje Adı";
-            this.label89.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddProjectForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(107)))));
+            this.btnAddProjectForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddProjectForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddProjectForm.FlatAppearance.BorderSize = 0;
+            this.btnAddProjectForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProjectForm.Font = new System.Drawing.Font("Open Sans SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProjectForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
+            this.btnAddProjectForm.Location = new System.Drawing.Point(3, 3);
+            this.btnAddProjectForm.Name = "btnAddProjectForm";
+            this.btnAddProjectForm.Size = new System.Drawing.Size(411, 34);
+            this.btnAddProjectForm.TabIndex = 10;
+            this.btnAddProjectForm.Text = "Yeni Proje Ekle";
+            this.btnAddProjectForm.UseVisualStyleBackColor = false;
+            this.btnAddProjectForm.Click += new System.EventHandler(this.btnAddProjectForm_Click);
             // 
             // tlpDepartments
             // 
@@ -999,7 +581,7 @@
             this.tlpDepartments.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpDepartments.Controls.Add(this.dgvDepartments, 0, 1);
             this.tlpDepartments.Controls.Add(this.txtAddDeparment, 0, 0);
-            this.tlpDepartments.Location = new System.Drawing.Point(176, 386);
+            this.tlpDepartments.Location = new System.Drawing.Point(171, 781);
             this.tlpDepartments.Name = "tlpDepartments";
             this.tlpDepartments.RowCount = 3;
             this.tlpDepartments.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
@@ -1030,7 +612,7 @@
             this.tlpQuestions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpQuestions.Controls.Add(this.dgvQuestions, 0, 1);
             this.tlpQuestions.Controls.Add(this.txtAddQuestion, 0, 0);
-            this.tlpQuestions.Location = new System.Drawing.Point(176, 576);
+            this.tlpQuestions.Location = new System.Drawing.Point(439, 781);
             this.tlpQuestions.Name = "tlpQuestions";
             this.tlpQuestions.RowCount = 2;
             this.tlpQuestions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
@@ -1084,7 +666,6 @@
             this.txtAddQuestion.Text = "Yeni Soru Ekle (Eklemek için Enter\'a basınız)";
             this.txtAddQuestion.Enter += new System.EventHandler(this.TxtAddQuestion_Enter);
             this.txtAddQuestion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAddQuestion_KeyDown);
-            this.txtAddQuestion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddQuestion_KeyPress);
             this.txtAddQuestion.Leave += new System.EventHandler(this.TxtAddQuestion_Leave);
             // 
             // tlpReports
@@ -1094,7 +675,7 @@
             this.tlpReports.ColumnCount = 1;
             this.tlpReports.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpReports.Controls.Add(this.flpReports, 0, 0);
-            this.tlpReports.Location = new System.Drawing.Point(484, 28);
+            this.tlpReports.Location = new System.Drawing.Point(763, 6);
             this.tlpReports.Name = "tlpReports";
             this.tlpReports.RowCount = 1;
             this.tlpReports.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1827,7 +1408,7 @@
             this.tlpEmployees.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpEmployees.Controls.Add(this.flpEmployees, 0, 1);
             this.tlpEmployees.Controls.Add(this.btnAddEmployeeForm, 0, 0);
-            this.tlpEmployees.Location = new System.Drawing.Point(761, 500);
+            this.tlpEmployees.Location = new System.Drawing.Point(968, 575);
             this.tlpEmployees.Name = "tlpEmployees";
             this.tlpEmployees.RowCount = 2;
             this.tlpEmployees.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
@@ -2693,7 +2274,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 830);
+            this.ClientSize = new System.Drawing.Size(1309, 975);
             this.Controls.Add(this.tlpProjects);
             this.Controls.Add(this.tlpEmployees);
             this.Controls.Add(this.tlpReports);
@@ -2713,13 +2294,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tlpProjects.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             this.tlpDepartments.ResumeLayout(false);
             this.tlpDepartments.PerformLayout();
             this.tlpQuestions.ResumeLayout(false);
@@ -2772,7 +2346,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnProjectDetailForm;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button4;
@@ -2900,34 +2474,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.Button btnAddEmployeeForm;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblProjectName;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.Label label85;
-        private System.Windows.Forms.Label label86;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.Button btnAddProjectForm;
     }
 }
 

@@ -63,6 +63,12 @@
     <Compile Include="AddEmployeeForm.Designer.cs">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProjectForm.Designer.cs">
+      <DependentUpon>AddProjectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetailEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,18 @@
     <Compile Include="Migrations\201910141304507_Init.designer.cs">
       <DependentUpon>201910141304507_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910170918339_ChangeASNullableFinishDateRecord.cs" />
+    <Compile Include="Migrations\201910170918339_ChangeASNullableFinishDateRecord.designer.cs">
+      <DependentUpon>201910170918339_ChangeASNullableFinishDateRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910170921039_AddSexRecordToEmployee.cs" />
+    <Compile Include="Migrations\201910170921039_AddSexRecordToEmployee.designer.cs">
+      <DependentUpon>201910170921039_AddSexRecordToEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910180819588_ChangeEmployeeImgTypeToString.cs" />
+    <Compile Include="Migrations\201910180819588_ChangeEmployeeImgTypeToString.designer.cs">
+      <DependentUpon>201910180819588_ChangeEmployeeImgTypeToString.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Authorization.cs" />
     <Compile Include="Models\Department.cs" />
@@ -117,8 +135,14 @@
     <EmbeddedResource Include="AddEmployeeForm.resx">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddProjectForm.resx">
+      <DependentUpon>AddProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DetailEmployeeForm.resx">
       <DependentUpon>DetailEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailProjectForm.resx">
+      <DependentUpon>DetailProjectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetailReportForm.resx">
       <DependentUpon>DetailReportForm.cs</DependentUpon>
@@ -128,6 +152,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910141304507_Init.resx">
       <DependentUpon>201910141304507_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910170918339_ChangeASNullableFinishDateRecord.resx">
+      <DependentUpon>201910170918339_ChangeASNullableFinishDateRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910170921039_AddSexRecordToEmployee.resx">
+      <DependentUpon>201910170921039_AddSexRecordToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910180819588_ChangeEmployeeImgTypeToString.resx">
+      <DependentUpon>201910180819588_ChangeEmployeeImgTypeToString.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

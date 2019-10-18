@@ -136,12 +136,6 @@ namespace Depman
             f.Show();
         }
 
-        private void txtAddQuestion_KeyPress(object sender, KeyPressEventArgs e)
-        {
-   
-
-        }
-
         private void TxtAddQuestion_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -150,6 +144,18 @@ namespace Depman
                 ctx.SaveChanges();
                 dgvQuestions.DataSource = ctx.Question.ToList();
             }
+        }
+
+        private void btnAddProjectForm_Click(object sender, EventArgs e)
+        {
+            var f = new AddProjectForm();
+            f.Show();
+        }
+
+        private void btnProjectDetailForm_Click(object sender, EventArgs e)
+        {
+            var f = new DetailProjectForm();
+            f.Show();
         }
     }
 }

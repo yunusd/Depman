@@ -10,15 +10,16 @@ using System.Windows.Forms;
 
 namespace Depman
 {
-    public partial class DetailProjectForm : Form
+    public partial class AddProjectForm : Form
     {
-        public DetailProjectForm()
+        public AddProjectForm()
         {
             InitializeComponent();
         }
 
-        private void DetailProjectForm_Load(object sender, EventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
+
 
         }
     }
