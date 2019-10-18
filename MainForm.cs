@@ -153,7 +153,7 @@ namespace Depman
             {
                 if (string.IsNullOrWhiteSpace(questionTitle))
                 {
-                    MessageBox.Show("Birim adı girmediniz!");
+                    MessageBox.Show("Soru girmediniz!");
                     return;
                 }
                 ctx.Question.Add(new Question { QuestionTitle =  questionTitle });
