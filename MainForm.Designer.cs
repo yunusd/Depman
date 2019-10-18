@@ -32,7 +32,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnQuestions = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnEmployees = new System.Windows.Forms.Button();
             this.btnProjects = new System.Windows.Forms.Button();
@@ -197,6 +197,9 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label83 = new System.Windows.Forms.Label();
             this.btnAddEmployeeForm = new System.Windows.Forms.Button();
+            this.tlpSettings = new System.Windows.Forms.TableLayoutPanel();
+            this.btnDark = new System.Windows.Forms.Button();
+            this.btnLight = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartments)).BeginInit();
@@ -229,6 +232,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.tlpSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -237,7 +241,7 @@
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.btnQuestions);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnReports);
             this.panel1.Controls.Add(this.btnEmployees);
             this.panel1.Controls.Add(this.btnProjects);
@@ -292,23 +296,24 @@
             this.btnQuestions.UseVisualStyleBackColor = true;
             this.btnQuestions.Click += new System.EventHandler(this.BtnQuestions_Click);
             // 
-            // button5
+            // btnSettings
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button5.Image = global::Depman.Properties.Resources.icons8_settings_25;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 801);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(160, 29);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "  Ayarlar";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
+            this.btnSettings.Image = global::Depman.Properties.Resources.icons8_settings_25;
+            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.Location = new System.Drawing.Point(0, 801);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(160, 29);
+            this.btnSettings.TabIndex = 6;
+            this.btnSettings.Text = "  Ayarlar";
+            this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
             // btnReports
             // 
@@ -2693,11 +2698,53 @@
             this.btnAddEmployeeForm.UseVisualStyleBackColor = false;
             this.btnAddEmployeeForm.Click += new System.EventHandler(this.BtnAddEmployeeForm_Click);
             // 
+            // tlpSettings
+            // 
+            this.tlpSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(48)))));
+            this.tlpSettings.ColumnCount = 1;
+            this.tlpSettings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpSettings.Controls.Add(this.btnDark, 0, 1);
+            this.tlpSettings.Controls.Add(this.btnLight, 0, 0);
+            this.tlpSettings.Location = new System.Drawing.Point(464, 569);
+            this.tlpSettings.Name = "tlpSettings";
+            this.tlpSettings.RowCount = 2;
+            this.tlpSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 154F));
+            this.tlpSettings.Size = new System.Drawing.Size(291, 254);
+            this.tlpSettings.TabIndex = 9;
+            this.tlpSettings.Visible = false;
+            this.tlpSettings.Paint += new System.Windows.Forms.PaintEventHandler(this.TlpSettings_Paint);
+            // 
+            // btnDark
+            // 
+            this.btnDark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(88)))), ((int)(((byte)(107)))));
+            this.btnDark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
+            this.btnDark.Location = new System.Drawing.Point(3, 103);
+            this.btnDark.Name = "btnDark";
+            this.btnDark.Size = new System.Drawing.Size(107, 92);
+            this.btnDark.TabIndex = 1;
+            this.btnDark.Text = "Dark Theme";
+            this.btnDark.UseVisualStyleBackColor = false;
+            this.btnDark.Click += new System.EventHandler(this.BtnDark_Click);
+            // 
+            // btnLight
+            // 
+            this.btnLight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(88)))), ((int)(((byte)(107)))));
+            this.btnLight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
+            this.btnLight.Location = new System.Drawing.Point(3, 3);
+            this.btnLight.Name = "btnLight";
+            this.btnLight.Size = new System.Drawing.Size(107, 92);
+            this.btnLight.TabIndex = 0;
+            this.btnLight.Text = "Light Theme";
+            this.btnLight.UseVisualStyleBackColor = false;
+            this.btnLight.Click += new System.EventHandler(this.BtnLight_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1146, 830);
+            this.Controls.Add(this.tlpSettings);
             this.Controls.Add(this.tlpProjects);
             this.Controls.Add(this.tlpEmployees);
             this.Controls.Add(this.tlpReports);
@@ -2757,6 +2804,7 @@
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.tlpSettings.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2770,7 +2818,7 @@
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnEmployees;
         private System.Windows.Forms.Button btnProjects;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnQuestions;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
@@ -2932,6 +2980,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDepartmentId;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDepartmentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEmployeesOfDepartment;
+        private System.Windows.Forms.TableLayoutPanel tlpSettings;
+        private System.Windows.Forms.Button btnDark;
+        private System.Windows.Forms.Button btnLight;
     }
 }
 

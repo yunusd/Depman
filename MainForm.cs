@@ -15,9 +15,11 @@ namespace Depman
 {
     public partial class MainForm : Form
     {
+
         TableLayoutPanel activePanel;
         Button activeButton;
         string activeIcon;
+        bool whitetheme = false;
 
         DepmanContext ctx;
 
@@ -41,6 +43,8 @@ namespace Depman
                 activePanel.Visible = false;
                 activeButton.Image = img ?? throw new Exception("image not found"); // throw an exception if image not found
                 activeButton.ForeColor = Color.FromArgb(173, 179, 201);
+
+
             }
             activePanel = panel; // Change active panel with selected panel
             activeButton = button;
@@ -140,7 +144,7 @@ namespace Depman
 
         private void txtAddQuestion_KeyPress(object sender, KeyPressEventArgs e)
         {
-   
+
 
         }
 
@@ -199,6 +203,92 @@ namespace Depman
         private void ListDepartments()
         {
             dgvDepartments.DataSource = ctx.Department.ToList();
+        }
+
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+            ActivePanel(tlpSettings, btnSettings, "icons8_settings_25");
+        }
+
+        private void TlpSettings_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnLight_Click(object sender, EventArgs e)
+        {
+            foreach (Control x in this.Controls)
+            {
+                if (x is Panel)
+                {
+                    ((Panel)x).BackColor = Color.FromArgb(204, 204, 204);
+                }
+            }
+
+            btnProjects.ForeColor = Color.FromArgb(23, 28, 48);
+
+            btnEmployees.ForeColor = Color.FromArgb(23, 28, 48);
+
+            btnDepartments.ForeColor = Color.FromArgb(23, 28, 48);
+
+            btnReports.ForeColor = Color.FromArgb(23, 28, 48);
+
+            btnQuestions.ForeColor = Color.FromArgb(23, 28, 48);
+
+            btnSettings.ForeColor = Color.FromArgb(23, 28, 48);
+
+            label13.ForeColor = Color.FromArgb(23, 28, 48);
+
+            label1.ForeColor = Color.FromArgb(23, 28, 48);
+
+            dgvDepartments.BackgroundColor = Color.FromArgb(217, 217, 217);
+
+            dgvQuestions.BackgroundColor = Color.FromArgb(217, 217, 217);
+
+            panel5.BackColor = Color.FromArgb(255, 255, 255);
+
+            btnDetailReport.BackColor = Color.FromArgb(255, 255, 255);
+
+            btnDetailReport.ForeColor = Color.FromArgb(217, 217, 217);
+
+            //whitetheme = true;
+
+            //foreach (Control c in Controls)
+            //{
+            //    c.BackColor = Color.FromArgb(217, 217, 217);
+            //    c.ForeColor = Color.FromArgb(23, 28, 48);
+            //}
+        }
+
+        private void BtnDark_Click(object sender, EventArgs e)
+        {
+            foreach (Control x in this.Controls)
+            {
+                if (x is Panel)
+                {
+                    ((Panel)x).BackColor = Color.FromArgb(23, 28, 48);
+                }
+            }
+
+            btnProjects.ForeColor = Color.FromArgb(217, 217, 217);
+
+            btnEmployees.ForeColor = Color.FromArgb(217, 217, 217);
+
+            btnDepartments.ForeColor = Color.FromArgb(217, 217, 217);
+
+            btnReports.ForeColor = Color.FromArgb(217, 217, 217);
+
+            btnQuestions.ForeColor = Color.FromArgb(217, 217, 217);
+
+            btnSettings.ForeColor = Color.FromArgb(217, 217, 217);
+
+            label13.ForeColor = Color.FromArgb(217, 217, 217);
+
+            label1.ForeColor = Color.FromArgb(217, 217, 217);
+
+            dgvDepartments.BackgroundColor = Color.FromArgb(23, 28, 48);
+
+            dgvQuestions.BackgroundColor = Color.FromArgb(23, 28, 48);
         }
     }
 }
