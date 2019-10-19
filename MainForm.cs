@@ -20,7 +20,7 @@ namespace Depman
         Button activeButton;
         string activeIcon;
 
-        DepmanContext ctx;
+        DepmanContext ctx = new DepmanContext();
 
         public MainForm()
         {
@@ -233,8 +233,7 @@ namespace Depman
         {
             if (e.KeyCode == Keys.Delete && dgvQuestions.SelectedRows.Count > 0)
             {
-                long id = (long)dgvQuestions.SelectedRows[0].Cells[0].Value;
-                Question question = ctx.Question.Find(id);
+                Question question = (Question)dgvQuestions.SelectedRows[0].DataBoundItem;
                 ctx.Question.Remove(question);
                 SaveAndGetQuestions(true);
             }
