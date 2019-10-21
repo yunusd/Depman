@@ -43,6 +43,9 @@
             this.clmDepartmentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDepartmentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmEmployeesOfDepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tlpProjects = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAddProjectForm = new System.Windows.Forms.Button();
+            this.flpProjects = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,8 +55,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.tlpProjects = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAddProjectForm = new System.Windows.Forms.Button();
             this.tlpDepartments = new System.Windows.Forms.TableLayoutPanel();
             this.txtAddDeparment = new System.Windows.Forms.TextBox();
             this.tlpQuestions = new System.Windows.Forms.TableLayoutPanel();
@@ -173,8 +174,9 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartments)).BeginInit();
-            this.panel2.SuspendLayout();
             this.tlpProjects.SuspendLayout();
+            this.flpProjects.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tlpDepartments.SuspendLayout();
             this.tlpQuestions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestions)).BeginInit();
@@ -417,6 +419,48 @@
             this.clmEmployeesOfDepartment.Name = "clmEmployeesOfDepartment";
             this.clmEmployeesOfDepartment.ReadOnly = true;
             // 
+            // tlpProjects
+            // 
+            this.tlpProjects.AutoScroll = true;
+            this.tlpProjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(48)))));
+            this.tlpProjects.ColumnCount = 1;
+            this.tlpProjects.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpProjects.Controls.Add(this.btnAddProjectForm, 0, 0);
+            this.tlpProjects.Controls.Add(this.flpProjects, 0, 1);
+            this.tlpProjects.Location = new System.Drawing.Point(174, 10);
+            this.tlpProjects.Name = "tlpProjects";
+            this.tlpProjects.RowCount = 2;
+            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpProjects.Size = new System.Drawing.Size(524, 703);
+            this.tlpProjects.TabIndex = 4;
+            // 
+            // btnAddProjectForm
+            // 
+            this.btnAddProjectForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(107)))));
+            this.btnAddProjectForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddProjectForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddProjectForm.FlatAppearance.BorderSize = 0;
+            this.btnAddProjectForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProjectForm.Font = new System.Drawing.Font("Open Sans SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProjectForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
+            this.btnAddProjectForm.Location = new System.Drawing.Point(3, 3);
+            this.btnAddProjectForm.Name = "btnAddProjectForm";
+            this.btnAddProjectForm.Size = new System.Drawing.Size(518, 34);
+            this.btnAddProjectForm.TabIndex = 10;
+            this.btnAddProjectForm.Text = "Yeni Proje Ekle";
+            this.btnAddProjectForm.UseVisualStyleBackColor = false;
+            this.btnAddProjectForm.Click += new System.EventHandler(this.BtnAddProjectForm_Click);
+            // 
+            // flpProjects
+            // 
+            this.flpProjects.Controls.Add(this.panel2);
+            this.flpProjects.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpProjects.Location = new System.Drawing.Point(3, 43);
+            this.flpProjects.Name = "flpProjects";
+            this.flpProjects.Size = new System.Drawing.Size(518, 657);
+            this.flpProjects.TabIndex = 11;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(71)))));
@@ -429,11 +473,12 @@
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel2.Location = new System.Drawing.Point(20, 60);
+            this.panel2.Location = new System.Drawing.Point(20, 20);
             this.panel2.Margin = new System.Windows.Forms.Padding(20);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(222, 322);
-            this.panel2.TabIndex = 9;
+            this.panel2.TabIndex = 10;
+            this.panel2.Visible = false;
             // 
             // label7
             // 
@@ -487,7 +532,6 @@
             this.btnProjectDetailForm.TabIndex = 5;
             this.btnProjectDetailForm.Text = "Detaylar";
             this.btnProjectDetailForm.UseVisualStyleBackColor = false;
-            this.btnProjectDetailForm.Click += new System.EventHandler(this.BtnProjectDetailForm_Click);
             // 
             // label10
             // 
@@ -545,39 +589,6 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Proje Adı";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tlpProjects
-            // 
-            this.tlpProjects.AutoScroll = true;
-            this.tlpProjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(48)))));
-            this.tlpProjects.ColumnCount = 1;
-            this.tlpProjects.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpProjects.Controls.Add(this.btnAddProjectForm, 0, 0);
-            this.tlpProjects.Controls.Add(this.panel2, 0, 1);
-            this.tlpProjects.Location = new System.Drawing.Point(174, 10);
-            this.tlpProjects.Name = "tlpProjects";
-            this.tlpProjects.RowCount = 2;
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpProjects.Size = new System.Drawing.Size(350, 448);
-            this.tlpProjects.TabIndex = 4;
-            // 
-            // btnAddProjectForm
-            // 
-            this.btnAddProjectForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(107)))));
-            this.btnAddProjectForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddProjectForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddProjectForm.FlatAppearance.BorderSize = 0;
-            this.btnAddProjectForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddProjectForm.Font = new System.Drawing.Font("Open Sans SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProjectForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.btnAddProjectForm.Location = new System.Drawing.Point(3, 3);
-            this.btnAddProjectForm.Name = "btnAddProjectForm";
-            this.btnAddProjectForm.Size = new System.Drawing.Size(344, 34);
-            this.btnAddProjectForm.TabIndex = 10;
-            this.btnAddProjectForm.Text = "Yeni Proje Ekle";
-            this.btnAddProjectForm.UseVisualStyleBackColor = false;
-            this.btnAddProjectForm.Click += new System.EventHandler(this.BtnAddProjectForm_Click);
             // 
             // tlpDepartments
             // 
@@ -2300,9 +2311,10 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartments)).EndInit();
+            this.tlpProjects.ResumeLayout(false);
+            this.flpProjects.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.tlpProjects.ResumeLayout(false);
             this.tlpDepartments.ResumeLayout(false);
             this.tlpDepartments.PerformLayout();
             this.tlpQuestions.ResumeLayout(false);
@@ -2351,15 +2363,6 @@
         private System.Windows.Forms.Button btnProjects;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnQuestions;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnProjectDetailForm;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dgvDepartments;
@@ -2484,6 +2487,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEmployeesOfDepartment;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmQuestionID;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmQuestionTitle;
+        private System.Windows.Forms.FlowLayoutPanel flpProjects;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnProjectDetailForm;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label12;
     }
 }
 

@@ -16,7 +16,8 @@ namespace Depman
     {
         DepmanContext ctx = new DepmanContext();
         bool isOpened = false;
-        string picPath;
+        string pictureCurrentPath;
+        string employeePicSavePathame;
 
         public AddEmployeeForm()
         {
@@ -65,8 +66,15 @@ namespace Depman
             ofdUploadEmployeePic.Filter = "Resim Dosyası |*.jpg; *.png";
             ofdUploadEmployeePic.Title = "Çalışan Fotoğrafı";
             ofdUploadEmployeePic.ShowDialog();
-            picPath = ofdUploadEmployeePic.FileName;
-            pbPlaceholderProfilePic.ImageLocation = picPath;
+
+            //Fotoğrafın kaydedilecek dizin yolunu oluşturma
+            pictureCurrentPath = ofdUploadEmployeePic.FileName;
+            pbPlaceholderProfilePic.ImageLocation = pictureCurrentPath;
+            string target = Application.StartupPath + @"\img\";
+
+            Directory.CreateDirectory(target);
+            string newPicName = Guid.NewGuid() + ".jpg"; //benzersiz isim
+            employeePicSavePathame = target + newPicName;
         }
 
         private void BtnAddEmployee_Click(object sender, EventArgs e)
@@ -77,22 +85,14 @@ namespace Depman
             string employeePhone = txtPhone.Text.Trim();
             string employeeDegree = txtDegree.Text.Trim();
             decimal employeeSalary = nudSalary.Value;
-            long employeeDepartmentID = (long)cboDepartment.SelectedValue;
+            long employeeDepartmentID = cboDepartment.SelectedValue != null ? (long)cboDepartment.SelectedValue : -1;
             var employeeHireDate = dtpHireDate.Value;
             string employeeAdress = txtAddress.Text.Trim();
-            string sex = cboSex.SelectedItem.ToString();
-
-            //Resmi klasöre kaydetme
-            string source = picPath;
-            string target = Application.StartupPath + @"\img\";
-            Directory.CreateDirectory(target);
-            string newPicName = Guid.NewGuid() + ".jpg"; //benzersiz isim
-            File.Copy(source, target + newPicName);
-            string employeePicPathName = target + newPicName;
+            string sex = cboSex.SelectedIndex > 0 ? cboSex.SelectedItem.ToString() : null;
 
 
             if (employeeFirstName != "" || employeeLastName != "" || employeeMail != "" || employeePhone != "" || employeeSalary != 0 || employeeDepartmentID > 0 ||
-                employeeAdress != "" || employeeDegree != "" || employeePicPathName != "")
+                employeeAdress != "" || employeeDegree != "" || pictureCurrentPath != "")
             {
                 if (employeeMail.Contains("@") == false)
                 {
@@ -117,9 +117,9 @@ namespace Depman
                         HireDate = employeeHireDate,
                         Degree = employeeDegree,
                         Sex = sex,
-                        EmployeeImgPath = employeePicPathName
+                        EmployeeImgPath = employeePicSavePathame
                     });
-
+                    File.Copy(pictureCurrentPath, employeePicSavePathame); // Fotoğrafı kaydet
                 }
                 else
                 {
@@ -137,9 +137,9 @@ namespace Depman
                         Degree = employeeDegree,
                         EmployeeFK = employeeManager,
                         Sex = sex,
-                        EmployeeImgPath = employeePicPathName
+                        EmployeeImgPath = employeePicSavePathame
                     });
-
+                    File.Copy(pictureCurrentPath, employeePicSavePathame); // Fotoğrafı kaydet
                 }
             }
             else

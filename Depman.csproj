@@ -115,6 +115,10 @@
     <Compile Include="Migrations\201910180819588_ChangeEmployeeImgTypeToString.designer.cs">
       <DependentUpon>201910180819588_ChangeEmployeeImgTypeToString.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910201256270_AddProjectLeaderEmployeeFKToProject.cs" />
+    <Compile Include="Migrations\201910201256270_AddProjectLeaderEmployeeFKToProject.designer.cs">
+      <DependentUpon>201910201256270_AddProjectLeaderEmployeeFKToProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Authorization.cs" />
     <Compile Include="Models\Department.cs" />
@@ -170,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910180819588_ChangeEmployeeImgTypeToString.resx">
       <DependentUpon>201910180819588_ChangeEmployeeImgTypeToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910201256270_AddProjectLeaderEmployeeFKToProject.resx">
+      <DependentUpon>201910201256270_AddProjectLeaderEmployeeFKToProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

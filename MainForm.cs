@@ -6,8 +6,11 @@ using System.Data;
 using System.Data.Entity;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,8 +28,8 @@ namespace Depman
         public MainForm()
         {
             InitializeComponent();
+            GetProjects();
             ActivePanel(tlpProjects, btnProjects, "icons8_group_of_projects_25");
-            ctx = new DepmanContext();
         }
 
         private void ActivePanel(TableLayoutPanel panel, Button button, string icon)
@@ -73,9 +76,105 @@ namespace Depman
             }
         }
 
+        public static Bitmap ResizeImage(Image image, int width, int height)
+        {
+            var destRect = new Rectangle(0, 0, width, height);
+            var destImage = new Bitmap(width, height);
+
+            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+
+            using (var graphics = Graphics.FromImage(destImage))
+            {
+                graphics.CompositingMode = CompositingMode.SourceCopy;
+                graphics.CompositingQuality = CompositingQuality.HighQuality;
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphics.SmoothingMode = SmoothingMode.HighQuality;
+                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                using (var wrapMode = new ImageAttributes())
+                {
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                }
+            }
+
+            return destImage;
+        }
+
         private void BtnProjects_Click(object sender, EventArgs e)
         {
             ActivePanel(tlpProjects, btnProjects, "icons8_group_of_projects_25");
+            GetProjects();
+        }
+
+        private void GetProjects()
+        {
+            var query = ctx.ProjectDetail.Join(ctx.Project, detail => detail.ProjectFK, project => project.ProjectID, (detail, project) => new
+            {
+                project.ProjectID,
+                project.ProjectTitle,
+                project.ProjectLeaderEmployeeFK,
+                detail.ProjectDetailID,
+                detail.ProjectDescription,
+                detail.StartDate,
+                detail.FinishDate,
+                detail.Employees
+            }).ToList();
+
+            flpProjects.Controls.Clear(); // every time GetProjects() function called delete all panels/controls inside flpProjects and then create new controls.
+
+            foreach (var item in query)
+            {
+                var sampleLeader = item.Employees.First(); // its not returning leader of team, it's just placeholder from db. TO-DO: get leader of team from db.
+                var leader = ctx.Employee.Find(item.ProjectLeaderEmployeeFK);
+                Panel newPanel = panel2.Clone();
+                Label newLabel = label12.Clone();
+                newLabel.Text = item.ProjectTitle;
+                Label newLabel9 = label9.Clone();
+
+                Button newButton = button4.Clone();
+                newButton.Text = $"{leader.EmployeeFirstName} {leader.EmployeeLastName}";
+                newButton.FlatAppearance.BorderSize = 0;
+                var img = new Bitmap(File.OpenRead(leader.EmployeeImgPath));
+                newButton.Image = ResizeImage(img, 30, 30);
+
+                Label newLabel8 = label8.Clone();
+                Label newLabel7 = label7.Clone();
+                Label newLabel11 = label11.Clone();
+
+                DateTime.TryParse(item.FinishDate.ToString(), out DateTime finishDate);
+                newLabel7.Text = item.FinishDate != null ? $"          {item.StartDate.ToShortDateString()} - {finishDate.ToShortDateString()}" : $"          {item.StartDate.ToShortDateString()} - Devam Ediyor";
+
+                Label newLabel10 = label10.Clone();
+                newLabel10.Text = item.ProjectDescription;
+                Button newBtnProjectDetailForm = btnProjectDetailForm.Clone();
+                newBtnProjectDetailForm.FlatAppearance.BorderSize = 0;
+                newBtnProjectDetailForm.Click += (senders, events) =>
+                {
+                    var f = new DetailProjectForm(item.ProjectID, item.ProjectDetailID);
+                    f.FormClosed += (sender, eventh) => GetProjects(); // when form closed get new projects;
+                    f.Show();
+                };
+                newPanel.Controls.Add(newLabel);
+                newPanel.Controls.Add(newLabel9);
+                newPanel.Controls.Add(newButton);
+                newPanel.Controls.Add(newLabel8);
+                newPanel.Controls.Add(newLabel7);
+                newPanel.Controls.Add(newLabel11);
+                newPanel.Controls.Add(newLabel10);
+                newPanel.Controls.Add(newBtnProjectDetailForm);
+                flpProjects.Controls.Add(newPanel);
+                flpProjects.AutoScroll = true;
+                newPanel.Visible = true;
+                newLabel.Show();
+                newLabel9.Show();
+                newButton.Show();
+                newLabel8.Show();
+                newLabel7.Show();
+                newLabel11.Show();
+                newLabel10.Show();
+                newBtnProjectDetailForm.Show();
+            }
         }
 
         private void BtnDepartments_Click(object sender, EventArgs e)
@@ -156,7 +255,7 @@ namespace Depman
                     MessageBox.Show("Soru girmediniz!");
                     return;
                 }
-                ctx.Question.Add(new Question { QuestionTitle =  questionTitle });
+                ctx.Question.Add(new Question { QuestionTitle = questionTitle });
                 SaveAndGetQuestions(true);
                 txtAddQuestion.Clear();
             }
@@ -165,12 +264,7 @@ namespace Depman
         private void BtnAddProjectForm_Click(object sender, EventArgs e)
         {
             var f = new AddProjectForm();
-            f.Show();
-        }
-
-        private void BtnProjectDetailForm_Click(object sender, EventArgs e)
-        {
-            var f = new DetailProjectForm();
+            f.FormClosed += (senders, events) => GetProjects(); // when form closed get new projects;
             f.Show();
         }
 
@@ -237,6 +331,28 @@ namespace Depman
                 ctx.Question.Remove(question);
                 SaveAndGetQuestions(true);
             }
+        }
+    }
+
+    public static class ControlExtensions
+    {
+        public static T Clone<T>(this T controlToClone)
+            where T : Control
+        {
+            PropertyInfo[] controlProperties = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+
+            T instance = Activator.CreateInstance<T>();
+
+            foreach (PropertyInfo propInfo in controlProperties)
+            {
+                if (propInfo.CanWrite)
+                {
+                    if (propInfo.Name != "WindowTarget")
+                        propInfo.SetValue(instance, propInfo.GetValue(controlToClone, null), null);
+                }
+            }
+
+            return instance;
         }
     }
 }

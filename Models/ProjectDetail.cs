@@ -27,6 +27,14 @@ namespace Depman.Models
         [ForeignKey("ProjectFK")]
         public Project Project { get; set; }
 
-        public ICollection<Employee> Employees { get; set; }
+        public ICollection<Employee> _employees;
+
+        public ICollection<Employee> Employees
+        {
+            get
+            {
+                return _employees ?? (_employees = new HashSet<Employee>());
+            }
+        }
     }
 }
