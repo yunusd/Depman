@@ -30,7 +30,7 @@ namespace Depman
 
         private void DetailProjectForm_Load(object sender, EventArgs e)
         {
-            var query = ctx.ProjectDetail.Where(x => x.ProjectDetailID == projectDetailId).Join(ctx.Project, detail => detail.ProjectFK, project => project.ProjectID, (detail, project) => new
+            var query = ctx.ProjectDetail.Join(ctx.Project, detail => detail.ProjectFK, project => project.ProjectID, (detail, project) => new
             {
                 project.ProjectID,
                 project.ProjectTitle,

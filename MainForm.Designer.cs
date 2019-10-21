@@ -240,9 +240,10 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(154, 29);
             this.txtSearch.TabIndex = 8;
-            this.txtSearch.Text = "Ara";
+            this.txtSearch.Text = "Ara(Enter\'a basınız)";
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSearch.Enter += new System.EventHandler(this.TxtSearch_Enter);
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearch_KeyDown);
             this.txtSearch.Leave += new System.EventHandler(this.TxtSearch_Leave);
             // 
             // btnQuestions
@@ -432,7 +433,7 @@
             this.tlpProjects.RowCount = 2;
             this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlpProjects.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpProjects.Size = new System.Drawing.Size(524, 703);
+            this.tlpProjects.Size = new System.Drawing.Size(325, 703);
             this.tlpProjects.TabIndex = 4;
             // 
             // btnAddProjectForm
@@ -446,7 +447,7 @@
             this.btnAddProjectForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.btnAddProjectForm.Location = new System.Drawing.Point(3, 3);
             this.btnAddProjectForm.Name = "btnAddProjectForm";
-            this.btnAddProjectForm.Size = new System.Drawing.Size(518, 34);
+            this.btnAddProjectForm.Size = new System.Drawing.Size(319, 34);
             this.btnAddProjectForm.TabIndex = 10;
             this.btnAddProjectForm.Text = "Yeni Proje Ekle";
             this.btnAddProjectForm.UseVisualStyleBackColor = false;
@@ -458,7 +459,7 @@
             this.flpProjects.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpProjects.Location = new System.Drawing.Point(3, 43);
             this.flpProjects.Name = "flpProjects";
-            this.flpProjects.Size = new System.Drawing.Size(518, 657);
+            this.flpProjects.Size = new System.Drawing.Size(319, 657);
             this.flpProjects.TabIndex = 11;
             // 
             // panel2

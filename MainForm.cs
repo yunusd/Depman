@@ -107,9 +107,9 @@ namespace Depman
             GetProjects();
         }
 
-        private void GetProjects()
+        private void GetProjects(string querystring = "")
         {
-            var query = ctx.ProjectDetail.Join(ctx.Project, detail => detail.ProjectFK, project => project.ProjectID, (detail, project) => new
+            var query = querystring == "" ? ctx.ProjectDetail.Join(ctx.Project, detail => detail.ProjectFK, project => project.ProjectID, (detail, project) => new
             {
                 project.ProjectID,
                 project.ProjectTitle,
@@ -119,7 +119,18 @@ namespace Depman
                 detail.StartDate,
                 detail.FinishDate,
                 detail.Employees
-            }).ToList();
+            }).ToList() : ctx.ProjectDetail.Join(ctx.Project, detail => detail.ProjectFK, project => project.ProjectID, (detail, project) => new
+            {
+                project.ProjectID,
+                project.ProjectTitle,
+                project.ProjectLeaderEmployeeFK,
+                detail.ProjectDetailID,
+                detail.ProjectDescription,
+                detail.StartDate,
+                detail.FinishDate,
+                detail.Employees
+            }).Where(x => x.ProjectTitle == querystring).ToList();
+
 
             flpProjects.Controls.Clear(); // every time GetProjects() function called delete all panels/controls inside flpProjects and then create new controls.
 
@@ -187,12 +198,12 @@ namespace Depman
 
         private void TxtSearch_Enter(object sender, EventArgs e)
         {
-            MakePlaceholder(txtSearch, "Ara", "enter");
+            MakePlaceholder(txtSearch, "Ara(Enter'a basınız)", "enter");
         }
 
         private void TxtSearch_Leave(object sender, EventArgs e)
         {
-            MakePlaceholder(txtSearch, "Ara", "leave");
+            MakePlaceholder(txtSearch, "Ara(Enter'a basınız)", "leave");
         }
 
         private void TxtAddDeparment_Enter(object sender, EventArgs e)
@@ -330,6 +341,18 @@ namespace Depman
                 Question question = (Question)dgvQuestions.SelectedRows[0].DataBoundItem;
                 ctx.Question.Remove(question);
                 SaveAndGetQuestions(true);
+            }
+        }
+
+        private void TxtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if(activePanel.Name == "tlpProjects") GetProjects(txtSearch.Text);
+                // if(activePanel.Name == "tlpDepartments") 
+                // if(activePanel.Name == "tlpEmployees")
+                // if(activePanel.Name == "tlpReports")
+                // if(activePanel.Name == "tlpQuestions")
             }
         }
     }
