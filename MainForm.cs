@@ -24,21 +24,34 @@ namespace Depman
         string activeIcon;
 
         DepmanContext ctx = new DepmanContext();
-
-        public MainForm()
+        User user;
+        public MainForm(User user)
         {
+            this.user = user;
             InitializeComponent();
+            var f = ctx.User.Where(x => x.UserID == user.UserID).Select(x => new
+            {
+                x.Username,
+                x.Employee.EmployeeImgPath,
+                x.Employee.Department.DepartmentName
+            }).SingleOrDefault();
+            lblDepartmentName.Text = $"{f.DepartmentName}";
+            btnProfile.Text = f.Username;
+            pbProfilePicture.Image = new Bitmap(f.EmployeeImgPath);
             GetProjects();
-            ActivePanel(tlpProjects, btnProjects, "icons8_group_of_projects_25");
+            ActivePanel(tlpProjects, btnProjects, "icons8_group_of_projects_25", this.user.Authorization);
         }
 
-        private void ActivePanel(TableLayoutPanel panel, Button button, string icon)
+        private void ActivePanel(TableLayoutPanel panel, Button button, string icon, int auth = 0)
         {
+
 
             // Make unvisible current panel if activePanel is not null
             if (activePanel != null)
             {
                 if (panel.Name == activePanel.Name) return; // if clicked button is already clicked then do nothing;
+                bool authStatus = Auth(panel.Name, auth);
+                if (!authStatus) return; // if auth scope failed don't open panel
                 var img = (Bitmap)Properties.Resources.ResourceManager.GetObject($"{activeIcon}");
                 activePanel.Visible = false;
                 activeButton.Image = img ?? throw new Exception("image not found"); // throw an exception if image not found
@@ -51,6 +64,24 @@ namespace Depman
             activePanel.Visible = true; // Make visible selected panel
             activeButton.ForeColor = Color.White;
             activeButton.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject($"{icon}_white");
+        }
+
+        private bool Auth(string panelName, int auth)
+        {
+            if (auth != (int)Authorization.admin && (panelName == "tlpEmployees" || panelName == "tlpQuestions" || panelName == "tlpDepartments")) // only admin account can accesss employees
+            {
+                MessageBox.Show("Bu alana erişim izniniz yok!");
+                return false;
+            }
+            if (auth != (int)Authorization.admin)
+            {
+                if (auth != (int)Authorization.mod && (panelName == "tlpEmployees" || panelName == "tlpQuestions" || panelName == "tlpDepartments" || panelName == "tlpReports")) // only admin account can accesss employees
+                {
+                    MessageBox.Show("Bu alana erişim izniniz yok!");
+                    return false;
+                }
+            }
+            return true;
         }
 
         /**
@@ -103,7 +134,7 @@ namespace Depman
 
         private void BtnProjects_Click(object sender, EventArgs e)
         {
-            ActivePanel(tlpProjects, btnProjects, "icons8_group_of_projects_25");
+            ActivePanel(tlpProjects, btnProjects, "icons8_group_of_projects_25", user.Authorization);
             GetProjects();
         }
 
@@ -192,7 +223,7 @@ namespace Depman
         {
             dgvDepartments.AutoGenerateColumns = false;
             SaveAndGetDepartments();
-            ActivePanel(tlpDepartments, btnDepartments, "icons8_organization_chart_people_25");
+            ActivePanel(tlpDepartments, btnDepartments, "icons8_organization_chart_people_25", user.Authorization);
         }
 
 
@@ -230,7 +261,7 @@ namespace Depman
         {
             dgvQuestions.AutoGenerateColumns = false;
             SaveAndGetQuestions();
-            ActivePanel(tlpQuestions, btnQuestions, "icons8_questions_25");
+            ActivePanel(tlpQuestions, btnQuestions, "icons8_questions_25", user.Authorization);
         }
 
         private void SaveAndGetQuestions(bool save = false)
@@ -241,12 +272,12 @@ namespace Depman
 
         private void BtnReports_Click(object sender, EventArgs e)
         {
-            ActivePanel(tlpReports, btnReports, "icons8_business_report_25");
+            ActivePanel(tlpReports, btnReports, "icons8_business_report_25", user.Authorization);
         }
 
         private void BtnEmployees_Click(object sender, EventArgs e)
         {
-            ActivePanel(tlpEmployees, btnEmployees, "icons8_people_working_together_25");
+            ActivePanel(tlpEmployees, btnEmployees, "icons8_people_working_together_25", user.Authorization);
 
         }
 
@@ -348,7 +379,7 @@ namespace Depman
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if(activePanel.Name == "tlpProjects") GetProjects(txtSearch.Text);
+                if (activePanel.Name == "tlpProjects") GetProjects(txtSearch.Text);
                 // if(activePanel.Name == "tlpDepartments") 
                 // if(activePanel.Name == "tlpEmployees")
                 // if(activePanel.Name == "tlpReports")

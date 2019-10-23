@@ -30,7 +30,7 @@ namespace Depman
 
         private void DetailProjectForm_Load(object sender, EventArgs e)
         {
-            var query = ctx.ProjectDetail.Join(ctx.Project, detail => detail.ProjectFK, project => project.ProjectID, (detail, project) => new
+            var query = ctx.ProjectDetail.Where(x => x.ProjectDetailID == projectDetailId).Join(ctx.Project, detail => detail.ProjectFK, project => project.ProjectID, (detail, project) => new
             {
                 project.ProjectID,
                 project.ProjectTitle,
@@ -251,6 +251,19 @@ namespace Depman
                 return;
             }
             MessageBox.Show("Kaydedildi!");
+            Close();
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            ctx.Project.Remove(ctx.Project.Find(projectId));
+            ctx.ProjectDetail.Remove(ctx.ProjectDetail.Find(projectDetailId));
+            int status = ctx.SaveChanges();
+            if (status == 0)
+            {
+                MessageBox.Show("Hata");
+                return;
+            }
             Close();
         }
     }

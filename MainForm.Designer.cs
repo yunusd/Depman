@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnQuestions = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -37,7 +37,7 @@
             this.btnEmployees = new System.Windows.Forms.Button();
             this.btnProjects = new System.Windows.Forms.Button();
             this.btnDepartments = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDepName = new System.Windows.Forms.Label();
             this.pbProfilePicture = new System.Windows.Forms.PictureBox();
             this.dgvDepartments = new System.Windows.Forms.DataGridView();
             this.clmDepartmentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -171,6 +171,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label83 = new System.Windows.Forms.Label();
             this.btnAddEmployeeForm = new System.Windows.Forms.Button();
+            this.lblDepartmentName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartments)).BeginInit();
@@ -205,7 +206,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(71)))));
-            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.lblDepartmentName);
+            this.panel1.Controls.Add(this.btnProfile);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.btnQuestions);
             this.panel1.Controls.Add(this.button5);
@@ -213,7 +215,7 @@
             this.panel1.Controls.Add(this.btnEmployees);
             this.panel1.Controls.Add(this.btnProjects);
             this.panel1.Controls.Add(this.btnDepartments);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblDepName);
             this.panel1.Controls.Add(this.pbProfilePicture);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -221,16 +223,21 @@
             this.panel1.Size = new System.Drawing.Size(160, 994);
             this.panel1.TabIndex = 0;
             // 
-            // label13
+            // btnProfile
             // 
-            this.label13.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label13.Location = new System.Drawing.Point(12, 183);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(138, 20);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Ad Soyad";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(0, 191);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(157, 29);
+            this.btnProfile.TabIndex = 10;
+            this.btnProfile.Text = "Ad Soyad";
+            this.btnProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProfile.UseVisualStyleBackColor = true;
             // 
             // txtSearch
             // 
@@ -355,23 +362,24 @@
             this.btnDepartments.UseVisualStyleBackColor = true;
             this.btnDepartments.Click += new System.EventHandler(this.BtnDepartments_Click);
             // 
-            // label1
+            // lblDepName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label1.Location = new System.Drawing.Point(37, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 26);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Depman";
+            this.lblDepName.AutoSize = true;
+            this.lblDepName.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
+            this.lblDepName.Location = new System.Drawing.Point(37, 10);
+            this.lblDepName.Name = "lblDepName";
+            this.lblDepName.Size = new System.Drawing.Size(91, 26);
+            this.lblDepName.TabIndex = 1;
+            this.lblDepName.Text = "Depman";
             // 
             // pbProfilePicture
             // 
             this.pbProfilePicture.Image = global::Depman.Properties.Resources.placeholder_profile_img;
-            this.pbProfilePicture.Location = new System.Drawing.Point(12, 42);
+            this.pbProfilePicture.Location = new System.Drawing.Point(12, 55);
             this.pbProfilePicture.Name = "pbProfilePicture";
             this.pbProfilePicture.Size = new System.Drawing.Size(138, 138);
+            this.pbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbProfilePicture.TabIndex = 0;
             this.pbProfilePicture.TabStop = false;
             // 
@@ -2291,6 +2299,17 @@
             this.btnAddEmployeeForm.UseVisualStyleBackColor = false;
             this.btnAddEmployeeForm.Click += new System.EventHandler(this.BtnAddEmployeeForm_Click);
             // 
+            // lblDepartmentName
+            // 
+            this.lblDepartmentName.AutoSize = true;
+            this.lblDepartmentName.Font = new System.Drawing.Font("Open Sans SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartmentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
+            this.lblDepartmentName.Location = new System.Drawing.Point(50, 35);
+            this.lblDepartmentName.Name = "lblDepartmentName";
+            this.lblDepartmentName.Size = new System.Drawing.Size(61, 18);
+            this.lblDepartmentName.TabIndex = 11;
+            this.lblDepartmentName.Text = "Depman";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
@@ -2356,7 +2375,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDepName;
         private System.Windows.Forms.PictureBox pbProfilePicture;
         private System.Windows.Forms.Button btnDepartments;
         private System.Windows.Forms.Button btnReports;
@@ -2365,7 +2384,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnQuestions;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dgvDepartments;
         private System.Windows.Forms.TableLayoutPanel tlpProjects;
         private System.Windows.Forms.TableLayoutPanel tlpDepartments;
@@ -2498,6 +2516,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Label lblDepartmentName;
     }
 }
 

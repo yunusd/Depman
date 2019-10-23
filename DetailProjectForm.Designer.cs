@@ -43,6 +43,7 @@
             this.cboDepartment = new System.Windows.Forms.ComboBox();
             this.txtProjectName = new System.Windows.Forms.TextBox();
             this.cboAddMemberOfTeam = new System.Windows.Forms.ComboBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -203,12 +204,29 @@
             this.cboAddMemberOfTeam.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.CboAddMemberOfTeam_Format);
             this.cboAddMemberOfTeam.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CboAddMemberOfTeam_KeyDown);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(107)))));
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
+            this.btnDelete.Location = new System.Drawing.Point(403, 318);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(109, 30);
+            this.btnDelete.TabIndex = 55;
+            this.btnDelete.Text = "Sil";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
             // DetailProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(653, 374);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cboAddMemberOfTeam);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lstMemberOfTeam);
@@ -249,5 +267,6 @@
         private System.Windows.Forms.ComboBox cboDepartment;
         private System.Windows.Forms.TextBox txtProjectName;
         private System.Windows.Forms.ComboBox cboAddMemberOfTeam;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
