@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblDepartmentName = new System.Windows.Forms.Label();
             this.btnProfile = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnQuestions = new System.Windows.Forms.Button();
@@ -128,50 +129,7 @@
             this.button22 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.button23 = new System.Windows.Forms.Button();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label63 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.button26 = new System.Windows.Forms.Button();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label72 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
-            this.button29 = new System.Windows.Forms.Button();
-            this.label75 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label83 = new System.Windows.Forms.Label();
             this.btnAddEmployeeForm = new System.Windows.Forms.Button();
-            this.lblDepartmentName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartments)).BeginInit();
@@ -195,12 +153,6 @@
             this.flpEmployees.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -222,6 +174,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 994);
             this.panel1.TabIndex = 0;
+            // 
+            // lblDepartmentName
+            // 
+            this.lblDepartmentName.AutoSize = true;
+            this.lblDepartmentName.Font = new System.Drawing.Font("Open Sans SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartmentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
+            this.lblDepartmentName.Location = new System.Drawing.Point(50, 35);
+            this.lblDepartmentName.Name = "lblDepartmentName";
+            this.lblDepartmentName.Size = new System.Drawing.Size(61, 18);
+            this.lblDepartmentName.TabIndex = 11;
+            this.lblDepartmentName.Text = "Depman";
             // 
             // btnProfile
             // 
@@ -1437,25 +1400,22 @@
             this.tlpEmployees.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpEmployees.Controls.Add(this.flpEmployees, 0, 1);
             this.tlpEmployees.Controls.Add(this.btnAddEmployeeForm, 0, 0);
-            this.tlpEmployees.Location = new System.Drawing.Point(968, 575);
+            this.tlpEmployees.Location = new System.Drawing.Point(786, 465);
             this.tlpEmployees.Name = "tlpEmployees";
             this.tlpEmployees.RowCount = 2;
             this.tlpEmployees.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tlpEmployees.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpEmployees.Size = new System.Drawing.Size(339, 339);
+            this.tlpEmployees.Size = new System.Drawing.Size(521, 449);
             this.tlpEmployees.TabIndex = 8;
             this.tlpEmployees.Visible = false;
             // 
             // flpEmployees
             // 
             this.flpEmployees.Controls.Add(this.panel9);
-            this.flpEmployees.Controls.Add(this.panel10);
-            this.flpEmployees.Controls.Add(this.panel11);
-            this.flpEmployees.Controls.Add(this.panel12);
             this.flpEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpEmployees.Location = new System.Drawing.Point(3, 38);
             this.flpEmployees.Name = "flpEmployees";
-            this.flpEmployees.Size = new System.Drawing.Size(333, 298);
+            this.flpEmployees.Size = new System.Drawing.Size(515, 408);
             this.flpEmployees.TabIndex = 1;
             // 
             // panel9
@@ -1664,624 +1624,6 @@
             this.label54.TabIndex = 7;
             this.label54.Text = "Durum";
             // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(71)))));
-            this.panel10.Controls.Add(this.label55);
-            this.panel10.Controls.Add(this.label56);
-            this.panel10.Controls.Add(this.button23);
-            this.panel10.Controls.Add(this.label57);
-            this.panel10.Controls.Add(this.label58);
-            this.panel10.Controls.Add(this.label59);
-            this.panel10.Controls.Add(this.label60);
-            this.panel10.Controls.Add(this.label61);
-            this.panel10.Controls.Add(this.label62);
-            this.panel10.Controls.Add(this.button24);
-            this.panel10.Controls.Add(this.button25);
-            this.panel10.Controls.Add(this.pictureBox6);
-            this.panel10.Controls.Add(this.label63);
-            this.panel10.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel10.Location = new System.Drawing.Point(20, 228);
-            this.panel10.Margin = new System.Windows.Forms.Padding(20);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(363, 168);
-            this.panel10.TabIndex = 21;
-            // 
-            // label55
-            // 
-            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label55.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label55.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label55.Location = new System.Drawing.Point(121, 140);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(105, 24);
-            this.label55.TabIndex = 20;
-            this.label55.Text = "541 012 3456";
-            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label56
-            // 
-            this.label56.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label56.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label56.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label56.Location = new System.Drawing.Point(4, 140);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(112, 24);
-            this.label56.TabIndex = 19;
-            this.label56.Text = "Telefon:";
-            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // button23
-            // 
-            this.button23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(107)))));
-            this.button23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button23.FlatAppearance.BorderSize = 0;
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button23.Location = new System.Drawing.Point(232, 137);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(138, 30);
-            this.button23.TabIndex = 18;
-            this.button23.Text = "Detaylar";
-            this.button23.UseVisualStyleBackColor = false;
-            // 
-            // label57
-            // 
-            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label57.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label57.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label57.Location = new System.Drawing.Point(121, 121);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(97, 24);
-            this.label57.TabIndex = 17;
-            this.label57.Text = "Lorem";
-            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label58
-            // 
-            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label58.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label58.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label58.Location = new System.Drawing.Point(4, 121);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(112, 24);
-            this.label58.TabIndex = 16;
-            this.label58.Text = "Birimi:";
-            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label59
-            // 
-            this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label59.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label59.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label59.Location = new System.Drawing.Point(121, 101);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(97, 24);
-            this.label59.TabIndex = 15;
-            this.label59.Text = "₺2600";
-            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label60
-            // 
-            this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label60.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label60.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label60.Location = new System.Drawing.Point(4, 101);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(112, 24);
-            this.label60.TabIndex = 14;
-            this.label60.Text = "Maaş:";
-            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label61
-            // 
-            this.label61.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label61.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label61.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label61.Location = new System.Drawing.Point(121, 82);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(97, 24);
-            this.label61.TabIndex = 13;
-            this.label61.Text = "10-13-2019";
-            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label62
-            // 
-            this.label62.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label62.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label62.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label62.Location = new System.Drawing.Point(4, 82);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(121, 24);
-            this.label62.TabIndex = 12;
-            this.label62.Text = "İşe Başlama Tarihi:";
-            this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // button24
-            // 
-            this.button24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button24.FlatAppearance.BorderSize = 0;
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(3, 32);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(216, 28);
-            this.button24.TabIndex = 11;
-            this.button24.Text = "John Doe";
-            this.button24.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button24.UseVisualStyleBackColor = true;
-            // 
-            // button25
-            // 
-            this.button25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button25.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button25.FlatAppearance.BorderSize = 0;
-            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button25.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button25.Location = new System.Drawing.Point(0, 0);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(219, 41);
-            this.button25.TabIndex = 9;
-            this.button25.Text = "Ad Soyad";
-            this.button25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button25.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Depman.Properties.Resources.placeholder_profile_img;
-            this.pictureBox6.Location = new System.Drawing.Point(232, 0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(138, 138);
-            this.pictureBox6.TabIndex = 10;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label63.Location = new System.Drawing.Point(3, 60);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(64, 22);
-            this.label63.TabIndex = 7;
-            this.label63.Text = "Durum";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(71)))));
-            this.panel11.Controls.Add(this.label64);
-            this.panel11.Controls.Add(this.label65);
-            this.panel11.Controls.Add(this.button26);
-            this.panel11.Controls.Add(this.label66);
-            this.panel11.Controls.Add(this.label67);
-            this.panel11.Controls.Add(this.label68);
-            this.panel11.Controls.Add(this.label69);
-            this.panel11.Controls.Add(this.label70);
-            this.panel11.Controls.Add(this.label71);
-            this.panel11.Controls.Add(this.button27);
-            this.panel11.Controls.Add(this.button28);
-            this.panel11.Controls.Add(this.pictureBox7);
-            this.panel11.Controls.Add(this.label72);
-            this.panel11.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel11.Location = new System.Drawing.Point(20, 436);
-            this.panel11.Margin = new System.Windows.Forms.Padding(20);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(363, 168);
-            this.panel11.TabIndex = 22;
-            // 
-            // label64
-            // 
-            this.label64.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label64.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label64.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label64.Location = new System.Drawing.Point(121, 140);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(105, 24);
-            this.label64.TabIndex = 20;
-            this.label64.Text = "541 012 3456";
-            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label65
-            // 
-            this.label65.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label65.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label65.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label65.Location = new System.Drawing.Point(4, 140);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(112, 24);
-            this.label65.TabIndex = 19;
-            this.label65.Text = "Telefon:";
-            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // button26
-            // 
-            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(107)))));
-            this.button26.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button26.FlatAppearance.BorderSize = 0;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button26.Location = new System.Drawing.Point(232, 137);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(138, 30);
-            this.button26.TabIndex = 18;
-            this.button26.Text = "Detaylar";
-            this.button26.UseVisualStyleBackColor = false;
-            // 
-            // label66
-            // 
-            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label66.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label66.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label66.Location = new System.Drawing.Point(121, 121);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(97, 24);
-            this.label66.TabIndex = 17;
-            this.label66.Text = "Lorem";
-            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label67
-            // 
-            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label67.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label67.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label67.Location = new System.Drawing.Point(4, 121);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(112, 24);
-            this.label67.TabIndex = 16;
-            this.label67.Text = "Birimi:";
-            this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label68
-            // 
-            this.label68.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label68.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label68.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label68.Location = new System.Drawing.Point(121, 101);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(97, 24);
-            this.label68.TabIndex = 15;
-            this.label68.Text = "₺2600";
-            this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label69
-            // 
-            this.label69.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label69.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label69.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label69.Location = new System.Drawing.Point(4, 101);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(112, 24);
-            this.label69.TabIndex = 14;
-            this.label69.Text = "Maaş:";
-            this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label70
-            // 
-            this.label70.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label70.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label70.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label70.Location = new System.Drawing.Point(121, 82);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(97, 24);
-            this.label70.TabIndex = 13;
-            this.label70.Text = "10-13-2019";
-            this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label71
-            // 
-            this.label71.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label71.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label71.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label71.Location = new System.Drawing.Point(4, 82);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(121, 24);
-            this.label71.TabIndex = 12;
-            this.label71.Text = "İşe Başlama Tarihi:";
-            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // button27
-            // 
-            this.button27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button27.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button27.FlatAppearance.BorderSize = 0;
-            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button27.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button27.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button27.Location = new System.Drawing.Point(3, 32);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(216, 28);
-            this.button27.TabIndex = 11;
-            this.button27.Text = "John Doe";
-            this.button27.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button27.UseVisualStyleBackColor = true;
-            // 
-            // button28
-            // 
-            this.button28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button28.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button28.FlatAppearance.BorderSize = 0;
-            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button28.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button28.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button28.Location = new System.Drawing.Point(0, 0);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(219, 41);
-            this.button28.TabIndex = 9;
-            this.button28.Text = "Ad Soyad";
-            this.button28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button28.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Depman.Properties.Resources.placeholder_profile_img;
-            this.pictureBox7.Location = new System.Drawing.Point(232, 0);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(138, 138);
-            this.pictureBox7.TabIndex = 10;
-            this.pictureBox7.TabStop = false;
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label72.Location = new System.Drawing.Point(3, 60);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(64, 22);
-            this.label72.TabIndex = 7;
-            this.label72.Text = "Durum";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(71)))));
-            this.panel12.Controls.Add(this.label73);
-            this.panel12.Controls.Add(this.label74);
-            this.panel12.Controls.Add(this.button29);
-            this.panel12.Controls.Add(this.label75);
-            this.panel12.Controls.Add(this.label78);
-            this.panel12.Controls.Add(this.label79);
-            this.panel12.Controls.Add(this.label80);
-            this.panel12.Controls.Add(this.label81);
-            this.panel12.Controls.Add(this.label82);
-            this.panel12.Controls.Add(this.button30);
-            this.panel12.Controls.Add(this.button31);
-            this.panel12.Controls.Add(this.pictureBox8);
-            this.panel12.Controls.Add(this.label83);
-            this.panel12.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel12.Location = new System.Drawing.Point(20, 644);
-            this.panel12.Margin = new System.Windows.Forms.Padding(20);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(363, 168);
-            this.panel12.TabIndex = 23;
-            // 
-            // label73
-            // 
-            this.label73.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label73.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label73.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label73.Location = new System.Drawing.Point(121, 140);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(105, 24);
-            this.label73.TabIndex = 20;
-            this.label73.Text = "541 012 3456";
-            this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label74
-            // 
-            this.label74.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label74.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label74.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label74.Location = new System.Drawing.Point(4, 140);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(112, 24);
-            this.label74.TabIndex = 19;
-            this.label74.Text = "Telefon:";
-            this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // button29
-            // 
-            this.button29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(107)))));
-            this.button29.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button29.FlatAppearance.BorderSize = 0;
-            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button29.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button29.Location = new System.Drawing.Point(232, 137);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(138, 30);
-            this.button29.TabIndex = 18;
-            this.button29.Text = "Detaylar";
-            this.button29.UseVisualStyleBackColor = false;
-            // 
-            // label75
-            // 
-            this.label75.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label75.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label75.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label75.Location = new System.Drawing.Point(121, 121);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(97, 24);
-            this.label75.TabIndex = 17;
-            this.label75.Text = "Lorem";
-            this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label78
-            // 
-            this.label78.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label78.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label78.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label78.Location = new System.Drawing.Point(4, 121);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(112, 24);
-            this.label78.TabIndex = 16;
-            this.label78.Text = "Birimi:";
-            this.label78.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label79
-            // 
-            this.label79.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label79.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label79.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label79.Location = new System.Drawing.Point(121, 101);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(97, 24);
-            this.label79.TabIndex = 15;
-            this.label79.Text = "₺2600";
-            this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label80
-            // 
-            this.label80.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label80.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label80.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label80.Location = new System.Drawing.Point(4, 101);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(112, 24);
-            this.label80.TabIndex = 14;
-            this.label80.Text = "Maaş:";
-            this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label81
-            // 
-            this.label81.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label81.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label81.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label81.Location = new System.Drawing.Point(121, 82);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(97, 24);
-            this.label81.TabIndex = 13;
-            this.label81.Text = "10-13-2019";
-            this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label82
-            // 
-            this.label82.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label82.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label82.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label82.Location = new System.Drawing.Point(4, 82);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(121, 24);
-            this.label82.TabIndex = 12;
-            this.label82.Text = "İşe Başlama Tarihi:";
-            this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // button30
-            // 
-            this.button30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button30.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button30.FlatAppearance.BorderSize = 0;
-            this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button30.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button30.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button30.Location = new System.Drawing.Point(3, 32);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(216, 28);
-            this.button30.TabIndex = 11;
-            this.button30.Text = "John Doe";
-            this.button30.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button30.UseVisualStyleBackColor = true;
-            // 
-            // button31
-            // 
-            this.button31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button31.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button31.FlatAppearance.BorderSize = 0;
-            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button31.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.button31.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button31.Location = new System.Drawing.Point(0, 0);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(219, 41);
-            this.button31.TabIndex = 9;
-            this.button31.Text = "Ad Soyad";
-            this.button31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button31.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Depman.Properties.Resources.placeholder_profile_img;
-            this.pictureBox8.Location = new System.Drawing.Point(232, 0);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(138, 138);
-            this.pictureBox8.TabIndex = 10;
-            this.pictureBox8.TabStop = false;
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label83.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.label83.Location = new System.Drawing.Point(3, 60);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(64, 22);
-            this.label83.TabIndex = 7;
-            this.label83.Text = "Durum";
-            // 
             // btnAddEmployeeForm
             // 
             this.btnAddEmployeeForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(107)))));
@@ -2293,22 +1635,11 @@
             this.btnAddEmployeeForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
             this.btnAddEmployeeForm.Location = new System.Drawing.Point(3, 3);
             this.btnAddEmployeeForm.Name = "btnAddEmployeeForm";
-            this.btnAddEmployeeForm.Size = new System.Drawing.Size(333, 29);
+            this.btnAddEmployeeForm.Size = new System.Drawing.Size(515, 29);
             this.btnAddEmployeeForm.TabIndex = 2;
             this.btnAddEmployeeForm.Text = "Yeni Çalışan Ekle";
             this.btnAddEmployeeForm.UseVisualStyleBackColor = false;
             this.btnAddEmployeeForm.Click += new System.EventHandler(this.BtnAddEmployeeForm_Click);
-            // 
-            // lblDepartmentName
-            // 
-            this.lblDepartmentName.AutoSize = true;
-            this.lblDepartmentName.Font = new System.Drawing.Font("Open Sans SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartmentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.lblDepartmentName.Location = new System.Drawing.Point(50, 35);
-            this.lblDepartmentName.Name = "lblDepartmentName";
-            this.lblDepartmentName.Size = new System.Drawing.Size(61, 18);
-            this.lblDepartmentName.TabIndex = 11;
-            this.lblDepartmentName.Text = "Depman";
             // 
             // MainForm
             // 
@@ -2359,15 +1690,6 @@
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2457,48 +1779,6 @@
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label83;
         private System.Windows.Forms.Button btnAddEmployeeForm;
         private System.Windows.Forms.Button btnAddProjectForm;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDepartmentId;

@@ -22,6 +22,7 @@ namespace Depman
         TableLayoutPanel activePanel;
         Button activeButton;
         string activeIcon;
+        Bitmap img;
 
         DepmanContext ctx = new DepmanContext();
         User user;
@@ -278,12 +279,93 @@ namespace Depman
         private void BtnEmployees_Click(object sender, EventArgs e)
         {
             ActivePanel(tlpEmployees, btnEmployees, "icons8_people_working_together_25", user.Authorization);
-
+            GetEmployees();
         }
+        private void GetEmployees(string queryString = "")
+        {
+            var query = queryString == "" ? ctx.Employee.ToList() : ctx.Employee.Where(x => x.EmployeeFirstName == queryString || x.EmployeeLastName == queryString).ToList();
 
+            flpEmployees.Controls.Clear();
+
+            foreach (var item in query)
+            {
+                Panel newPanel = panel9.Clone();
+                Button newButton1 = button22.Clone();
+                newButton1.FlatAppearance.BorderSize = 0;
+                Button newButton2 = button21.Clone();
+                newButton2.FlatAppearance.BorderSize = 0;
+                newButton2.Text = item.EmployeeFirstName + " " + item.EmployeeLastName;
+                Label newLabel1 = label54.Clone();
+                Label newLabel2 = label53.Clone();
+                Label newLabel3 = label52.Clone();
+                newLabel3.Text = item.HireDate.ToShortDateString();
+                Label newLabel4 = label51.Clone();
+                Label newLabel5 = label50.Clone();
+                newLabel5.Text = item.Salary.ToString();
+                Label newLabel6 = label49.Clone();
+                Label newLabel7 = label48.Clone();
+                newLabel7.Text = ctx.Department.Find(item.DepartmentFK).DepartmentName;
+                Label newLabel8 = label76.Clone();
+                newLabel8.Text = item.Phone;
+                Label newLabel9 = label77.Clone();
+                PictureBox newPictureBox = pictureBox5.Clone();
+
+
+
+                if (img != null)
+                {
+                    img = new Bitmap(File.OpenRead(item.EmployeeImgPath));
+                }
+
+
+
+                newPictureBox.ImageLocation = item.EmployeeImgPath;
+
+                Button newBtnEmployeeDetailForm = button20.Clone();
+                newBtnEmployeeDetailForm.FlatAppearance.BorderSize = 0;
+                // todo: when employee change main form still get old employee data, fix this.
+                newBtnEmployeeDetailForm.Click += (senders, events) =>
+                {
+                    var f = new DetailEmployeeForm(item.EmployeeID);
+                    f.FormClosed += (sender, eventh) => GetEmployees(); // when form closed get new Employees
+                    f.Show();
+                };
+
+
+                newPanel.Controls.Add(newLabel1);
+                newPanel.Controls.Add(newLabel2);
+                newPanel.Controls.Add(newLabel3);
+                newPanel.Controls.Add(newLabel4);
+                newPanel.Controls.Add(newLabel5);
+                newPanel.Controls.Add(newLabel6);
+                newPanel.Controls.Add(newLabel7);
+                newPanel.Controls.Add(newLabel8);
+                newPanel.Controls.Add(newLabel9);
+                newPanel.Controls.Add(newButton1);
+                newPanel.Controls.Add(newButton2);
+                newPanel.Controls.Add(newBtnEmployeeDetailForm);
+                newPanel.Controls.Add(newPictureBox);
+                flpEmployees.Controls.Add(newPanel);
+                flpEmployees.AutoScroll = true;
+                newPanel.Visible = true;
+                newLabel1.Show();
+                newLabel2.Show();
+                newLabel3.Show();
+                newLabel4.Show();
+                newLabel5.Show();
+                newLabel6.Show();
+                newLabel7.Show();
+                newLabel8.Show();
+                newLabel9.Show();
+                newPictureBox.Show();
+                newBtnEmployeeDetailForm.Show();
+
+            }
+        }
         private void BtnAddEmployeeForm_Click(object sender, EventArgs e)
         {
             var f = new AddEmployeeForm();
+            f.FormClosed += (senders, events) => GetEmployees(); // when form closed get new employees
             f.Show();
         }
 
