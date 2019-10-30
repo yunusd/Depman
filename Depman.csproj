@@ -69,6 +69,12 @@
     <Compile Include="AddProjectForm.Designer.cs">
       <DependentUpon>AddProjectForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddReportForm.Designer.cs">
+      <DependentUpon>AddReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetailEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddProjectForm.resx">
       <DependentUpon>AddProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddReportForm.resx">
+      <DependentUpon>AddReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetailEmployeeForm.resx">
       <DependentUpon>DetailEmployeeForm.cs</DependentUpon>

@@ -274,6 +274,88 @@ namespace Depman
         private void BtnReports_Click(object sender, EventArgs e)
         {
             ActivePanel(tlpReports, btnReports, "icons8_business_report_25", user.Authorization);
+            GetReports();
+        }
+
+        private void GetReports()
+        {
+            var sorgu = ctx.Report.Join(ctx.Employee, report => report.EmployeeFK, employee => employee.EmployeeID, (report, employee) => new {
+                employee.EmployeeID,
+                employee.EmployeeFirstName,
+                employee.EmployeeLastName,
+                employee.EmployeeImgPath,
+                employee.Salary,
+                employee.HireDate,
+                report.Rating,
+                report.ReportID,
+                report.ReportDescription
+            }).OrderByDescending(x => x.Rating).ToList();
+
+            flpReports.Controls.Clear();
+
+            foreach (var item in sorgu)
+            {
+                Panel newPanel = panel5.Clone();
+                panel5.Visible = false;
+
+                Button newButton = button13.Clone();
+                newButton.FlatAppearance.BorderSize = 0;
+
+                Button newButton2 = button12.Clone();
+
+                newButton2.FlatAppearance.BorderSize = 0;
+                newButton2.Text = $"{item.EmployeeFirstName} {item.EmployeeLastName}";
+
+                label30.Text = item.HireDate.ToShortDateString();
+                label28.Text = $"{item.Salary}";
+                label26.Text = $"{item.Rating}";
+
+                Button newButton3 = btnDetailReport.Clone();
+                newButton3.Click += (senders, events) =>
+                {
+                    var f = new DetailReportForm(item.EmployeeID, item.ReportID);
+                    f.FormClosed += (sender, eventh) => GetReports(); // when form closed get new projects;
+                    f.Show();
+                };
+                Label newLabel = label32.Clone();
+                Label newLabel1 = label31.Clone();
+                Label newLabel2 = label30.Clone();//Tarih-hiredate
+                Label newLabel3 = label29.Clone();
+                Label newLabel4 = label28.Clone();//maas-salary
+                Label newLabel5 = label27.Clone();
+                Label newLabel26 = label26.Clone();//puan-rating
+
+                PictureBox newPictureBox = pictureBox2.Clone();
+                newPictureBox.ImageLocation = item.EmployeeImgPath;
+
+
+                flpReports.Controls.Add(newPanel);
+                newPanel.Controls.Add(newButton);
+                newPanel.Controls.Add(newButton2);
+                newPanel.Controls.Add(newButton3);
+                newPanel.Controls.Add(newLabel);
+                newPanel.Controls.Add(newLabel1);
+                newPanel.Controls.Add(newLabel2);
+                newPanel.Controls.Add(newLabel3);
+                newPanel.Controls.Add(newLabel4);
+                newPanel.Controls.Add(newLabel5);
+                newPanel.Controls.Add(newLabel26);
+
+                newPanel.Controls.Add(newPictureBox);
+
+                newPanel.Show();
+                newButton.Show();
+                newButton2.Show();
+                newButton3.Show();
+                newLabel.Show();
+                newLabel1.Show();
+                newLabel2.Show();
+                newLabel3.Show();
+                newLabel4.Show();
+                newLabel5.Show();
+                newLabel26.Show();
+                newPictureBox.Show();
+            }
         }
 
         private void BtnEmployees_Click(object sender, EventArgs e)
@@ -281,6 +363,7 @@ namespace Depman
             ActivePanel(tlpEmployees, btnEmployees, "icons8_people_working_together_25", user.Authorization);
             GetEmployees();
         }
+
         private void GetEmployees(string queryString = "")
         {
             var query = queryString == "" ? ctx.Employee.ToList() : ctx.Employee.Where(x => x.EmployeeFirstName == queryString || x.EmployeeLastName == queryString).ToList();
@@ -467,6 +550,13 @@ namespace Depman
                 // if(activePanel.Name == "tlpReports")
                 // if(activePanel.Name == "tlpQuestions")
             }
+        }
+
+        private void BtnAddReportForm_Click(object sender, EventArgs e)
+        {
+            var f = new AddReportForm(user.EmployeeFK);
+            f.FormClosed += (senders, events) => GetReports(); // when form closed get new projects;
+            f.Show();
         }
     }
 
